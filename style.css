@@ -232,18 +232,29 @@ body {
         line-height: 1.6;
         text-align: left;
     }
+    .projects {
+flex-direction: column;
+align-items: center;
+gap: 100px;
+}
+
+.project-card img {
+width: 100%;
+max-width: 320px;
+height: auto;
+align-items: center;
+}
+.btn {
+width: 100%;
+max-width: 320px;
+text-align: center;
+}
 
     .buttons {
         flex-direction: column;
         gap: 25px;
         align-items: center;
     }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-
 }
 
 /* =========================
@@ -272,7 +283,7 @@ body {
 
     width: 320px;
     height: auto;
-
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -286,17 +297,17 @@ body {
 
     color: white;
     text-decoration: none;
-
+    align-items: center;
     padding: 18px 35px;
-
     border-radius: 18px;
     border: 2px solid #262626;
-
     font-size: 1.2rem;
-
     transition: 0.3s;
 }
-
+.project-card p{
+    display: flex;
+    align-items: center;
+}
 .btn:hover {
     transform: translateY(-4px);
 }
@@ -341,6 +352,7 @@ footer {
 }
 
 .footer-links a {
-
     color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
