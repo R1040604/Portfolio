@@ -593,3 +593,137 @@ font-size: 4rem;
 line-height: 1;
 }
 }
+
+
+/* =========================
+   Wallpaper wedstrijd PAGINA
+========================= */
+.process-wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
+}
+.process-content {
+flex: 4;
+}
+.process-image {
+flex: 1;
+}
+.process-image img {
+width: 100%;
+max-width: 120px;
+}
+.case-study{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px 120px;
+}
+
+.case-study h1{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.5rem;
+}
+
+.case-study section{
+    margin-bottom:80px;
+}
+
+.case-study h2{
+    margin-bottom:20px;
+    font-size:1.5rem;
+}
+
+.case-study p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.case-study ul{
+    padding-left:25px;
+    line-height:1.8;
+}
+
+.small-image {
+    display: block;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.result-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.process-section{
+    position:relative;
+}
+@media(max-width:1024px){
+.process-wrapper {
+flex-direction: column;
+align-items: center;
+}
+.process-image img {
+max-width: 90px;
+}
+
+    .case-study{
+        max-width:800px;
+        padding:60px 35px;
+    }
+
+    .case-study h1{
+        font-size:2rem;
+    }
+
+    .small-image{
+        width:250px;
+    }
+
+}
+@media(max-width:768px){
+
+    .case-study{
+
+        padding:40px 25px 80px;
+    }
+
+    .case-study h1{
+
+        font-size:1.6rem;
+        text-align:left;
+
+        margin-bottom:50px;
+    }
+
+    .case-study h2{
+
+        font-size:1.2rem;
+    }
+
+    .case-study p{
+
+        font-size:0.95rem;
+        line-height:1.6;
+    }
+
+    .case-study ul{
+
+        font-size:0.95rem;
+    }
+
+    .small-image{
+
+        width:100%;
+        max-width:250px;
+    }
+
+    .result-image{
+
+        width:100%;
+    }
+
+}
