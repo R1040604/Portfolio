@@ -4,11 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lumiere app design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+    <div class="blur blur3"></div>
+    <div class="blur blur4"></div>
+    <div class="blur blur5"></div>
+    <div class="blur blur6"></div>
+    <div class="blur blur7"></div>
+    <div class="blur blur8"></div>
+    <div class="blur blur9"></div>
+    <div class="blur blur10"></div>
+    <div class="blur blur11"></div>
+    <div class="blur blur12"></div>
+    <div class="blur blur13"></div>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Sarah</a>
+            <ul class="nav-links">
+                <li>
+                    <a href="projecten.html"> Mijn projecten</a>
+                </li>
+                <li><a href="overmij.html">Over Mij</a></li>
+            </ul>
+
+            <div class="hamburger">
+                ☰
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <a href="projecten.html"> Mijn projecten</a>
+            <a href="overmij.html">Over Mij</a>
+        </div>
+    </header>
+
     <main class="case-study">
 
         <h1>Redesign Cinema Lumière App</h1>
@@ -16,15 +51,29 @@
         <section>
             <h2>Probleemstelling</h2>
             <p>
-                De bestaande bioscoopervaring wordt steeds digitaler...
+                De website bevat veel waardevolle informatie, maar op mobiel wordt deze minder toegankelijk door:
+                Veel scrollen om films terug te vinden
+                Een complexe reservatieflow
+                Niet alle knoppen zijn even duidelijk
             </p>
         </section>
 
         <section>
-            <h2>Doelstelling</h2>
+            <h2>De uitdaging</h2>
             <p>
-                Het ontwerpen van een gebruiksvriendelijke applicatie...
+                Cinema Lumière beschikt over een website voor filmvertoningen en evenementen, maar de mobiele versie
+                biedt geen optimale gebruikerservaring. Omdat de cinema momenteel geen mobiele app heeft, ontwierp ik
+                een concept voor een app die bezoekers helpt om sneller films te ontdekken en eenvoudig tickets te
+                reserveren.
             </p>
+        </section>
+        <section>
+            <h2>Doelstelling</h2>
+            <ul>
+                <li>Gebruiksvriendelijke film categorieën ontwerpen</li>
+                <li>Ticketreservatie vereenvoudigen</li>
+                <li>Merkidentiteit van Lumière vertalen naar mobiel</li>
+            </ul>
         </section>
 
         <section class="gallery-three">
@@ -34,67 +83,60 @@
         </section>
 
         <section>
-            <h2>Persona & Analyse</h2>
 
-            <div class="two-column">
-
-                <div>
-                    <h3>Pijnpunten</h3>
-                    <ul>
-                        <li>Geen overzicht</li>
-                        <li>Moeilijk tickets reserveren</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Behoeften</h3>
-                    <ul>
-                        <li>Snel tickets kopen</li>
-                        <li>Duidelijke informatie</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
             <h2>Research & Analyse</h2>
 
-            <h2>Concurentie analyse</h2>
+            <div class="research-grid">
 
-            <h2>Ik vergeleek de mobiele website met de volgende apps</h2>
-            <ul>
-                <li>Kinepolis</li>
-                <li>Pathé</li>
-                <li>vue cinemas</li>
-            </ul>
-            <p>om te zien hoe de flow in elkaar zit</p>
+                <div class="research-card">
 
-            <h2>User Research</h2>
-            <h2>Belangrijke inzichten</h2>
-            <h2>Gebruikers willen snel antwoord op drie vragen</h2>
-            <ul>
-                <li>Wat speelt er vandaag?</li>
-                <li>Wanneer speelt het?</li>
-                <li>Kan ik meteen een ticket kopen?</li>
-            </ul>
+                    <h3>Concurrentieanalyse</h3>
+
+                    <p>Ik vergeleek de mobiele website met:</p>
+
+                    <ul>
+                        <li>Kinepolis</li>
+                        <li>Pathé</li>
+                        <li>Vue Cinemas</li>
+                    </ul>
+
+                    <p>Om te zien hoe de flow in elkaar zit.</p>
+
+                </div>
+
+                <div class="research-card">
+
+                    <h3>User Research</h3>
+
+                    <p>Belangrijke inzichten:</p>
+
+                    <ul>
+                        <li>Wat speelt er vandaag?</li>
+                        <li>Wanneer speelt het?</li>
+                        <li>Kan ik meteen een ticket kopen?</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
 
             <h2>Schetsen / Wireframes</h2>
-            <p>Voordat ik begon aan het visuele ontwerp, werkte ik de belangrijkste gebruikersstromen uit in snelle,
-                ruwe en gedetailleerde schets van een app. Deze schetsen hielpen om de navigatie, informatiestructuur en
-                ticketreservatieflow te valideren zonder afgeleid te worden door kleuren of branding.</p>
 
+            <p>
+                Voordat ik begon aan het visuele ontwerp werkte ik de
+                belangrijkste gebruikersstromen uit in wireframes.
+            </p>
 
-            <h2>De focus lag op 3 kerntaken:</h2>
+            <div class="wireframe-container">
 
-            <ul>
-                <li>Films ontdekken</li>
-                <li>Filminformatie bekijken</li>
-                <li>Tickets reserveren</li>
-            </ul>
-            <h2>Onboarding & Account</h2>
-            <p>De eerste schermen richten zich op registratie en aanmelden. Gebruikers kunnen eenvoudig een account
-                aanmaken of als gast verdergaan. Hierdoor blijft de drempel laag voor bezoekers die snel een ticket
-                willen reserveren.</p>
+                <img src="images/Schermafbeelding 2026-09-17 103802.png" alt="">
+
+            </div>
 
         </section>
 
@@ -105,10 +147,6 @@
                 Op de detailpagina krijgen gebruikers toegang tot essentiële informatie zoals de trailer, samenvatting,
                 genre en beschikbare speelmomenten. Het doel was om alle relevante informatie op één scherm beschikbaar
                 te maken.</p>
-
-            <div class="gallery-four">
-                <img src="images/Schermafbeelding 2026-09-17 103802.png" alt="">
-            </div>
 
         </section>
 
@@ -132,14 +170,25 @@
         <section>
 
             <h2>Van wireframe naar prototype</h2>
+            <p>Vanuit de wireframes werkte ik het ontwerp verder uit tot een interactief high-fidelity prototype. Hier
+                kreeg het concept voor de Lumière-app voor het eerst zijn volledige visuele identiteit.
+                Ik experimenteerde met kleur, typografie, beeld en verschillende UI-componenten om een stijl te creëren
+                die past bij de sfeer van Cinema Lumière. Tegelijk bleef gebruiksvriendelijkheid centraal staan: elke
+                interactie en overgang moest duidelijk aanvoelen op een mobiel scherm.
+                Het prototype brengt de belangrijkste gebruikersflow samen: van een film ontdekken en een voorstelling
+                kiezen tot het selecteren van een zitplaats, betalen en ontvangen van een bevestiging.</p>
 
             <div class="gallery-four">
-
-                images/final1.png
-                images/final2.png
-                images/final3.png
-                images/final4.png
-
+                <img src="images/Startpagina high fi.png" alt="">
+                <img src="images/Inloggen high fi.png" alt="">
+                <img src="images/Registreren high fi.png" alt="">
+                <img src="images/Film.png" alt="">
+                <img src="images/ticketverkoop 1.png" alt="">
+                <img src="images/ticketverkoop 2.png" alt="">
+                <img src="images/ticketkoop 3.png" alt="">
+                <img src="images/ticketverkoop 4.png" alt="">
+                <img src="images/FAQ.png" alt="">
+                <img src="images/Instellingen.png" alt="">
             </div>
 
         </section>
@@ -149,8 +198,17 @@
             <h2>Reflectie</h2>
 
             <p>
-                Tijdens dit project heb ik geleerd hoe belangrijk gebruikersonderzoek
-                en iteratief ontwerpen zijn...
+                Tijdens dit project heb ik geleerd dat ontwerpkeuzes die voor mij vanzelfsprekend lijken, niet altijd
+                even duidelijk zijn voor gebruikers. Door gebruikerstesten ontdekte ik dat sommige interacties op de
+                mobiele website voor verwarring zorgden.
+                Een concreet voorbeeld was de zoekfunctie. In mijn eerste ontwerp stond bovenaan een zoekbalk. Tijdens
+                de testfase bleek echter dat gebruikers niet meteen begrepen dat ze eerst op de zoekbalk moesten tikken
+                om te kunnen zoeken. Op een smartphone verwachtten ze eerder een herkenbaar zoekicoon. Daarom heb ik de
+                zoekbalk vervangen door een zoekicoon(vergrootglas). Wanneer gebruikers hierop tikken, opent de
+                zoekfunctie onmiddellijk, waardoor de interactie veel intuïtiever aanvoelt.
+                Dit project heeft me geleerd hoe belangrijk het is om ontwerpkeuzes te toetsen aan echte gebruikers.
+                Kleine aanpassingen, gebaseerd op feedback, kunnen een grote impact hebben op de gebruiksvriendelijkheid
+                van een ontwerp
             </p>
 
         </section>
