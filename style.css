@@ -459,13 +459,6 @@ padding:100px 40px;
 flex-direction:column;
 align-items:center;
 }
-.about-text{
-max-width:100%;
-}
-
-.about-image img{
-max-width:280px;
-}
 
 .about-text{
     flex:2;
