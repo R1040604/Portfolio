@@ -449,47 +449,45 @@ body{
 
 /* ABOUT */
 
-.about{
-max-width:1200px;
-margin:1px auto;
-padding:100px 40px;
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
 }
 
-.about-container{
-flex-direction:column;
-align-items:center;
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
 }
 
-.about-text{
-    flex:2;
-    max-width:750px;
+.about-text {
+    flex: 2;
+    max-width: 750px;
 }
 
-.about-image{
-    flex:1;
-    display:flex;
-    justify-content:center;
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.about-image img{
-    width:100%;
-    max-width:300px;
-    border-radius:10px;
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
 }
 
-.about-text h2{
-margin-bottom:30px;
-font-size:2.5rem;
-}
-.about-text p{
-margin-bottom:20px;
-line-height:1.8;
-}
-.button-container{
-text-align:center;
-margin-top:80px;
+.about-text h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
 /* BUTTON */
 
 .button-container{
