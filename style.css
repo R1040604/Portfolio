@@ -72,13 +72,17 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #444;
+    background-color: #7d1fb5;
+    color: white;
+    padding: 12px;
+    border-radius: 16px;
+    border-color: 2px solid black;
     font-size: 1.3rem;
 }
-
+/*
 .nav-links a:hover {
     color: black;
-}
+} */
 
 /* Hamburger */
 
