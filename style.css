@@ -69,15 +69,17 @@ body {
     gap: 60px;
     list-style: none;
 }
-
 .nav-links a {
     text-decoration: none;
     background-color: #7d1fb5;
-    color: white;
-    padding: 12px;
+    color: white !important;
+    padding: 12px 20px;
     border-radius: 16px;
-    border-color: 2px solid black;
+    border: 2px solid black;
     font-size: 1.3rem;
+}
+.nav-links a:hover {
+    background-color: #5f158a;
 }
 /*
 .nav-links a:hover {
