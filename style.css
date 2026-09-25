@@ -277,6 +277,14 @@ text-align: center;
     justify-content: center;
     gap: 50px;
 }
+.project-link{
+    text-decoration:none;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
 
 .project-card {
     display: flex;
@@ -285,11 +293,11 @@ text-align: center;
     text-align: center;
 }
 
-.project-card img {
-width: 100%;
-max-width: 320px;
-height: auto;
-margin-bottom: 25px;
+.project-card img{
+    width:100%;
+    max-width:320px;
+    height:auto;
+    display:block;
 }
 .project-card h3,
 .project-card p,
@@ -298,22 +306,27 @@ text-align: center;
 margin-top: 20px;
 }
 
-.btn {
+.btn{
+    display:inline-block;
 
-    background: linear-gradient(
+    background:linear-gradient(
         to bottom,
         #bf46ff,
         #8220b7
     );
 
-    color: white;
-    text-decoration: none;
-    align-items: center;
-    padding: 18px 35px;
-    border-radius: 18px;
-    border: 2px solid #262626;
-    font-size: 1.2rem;
-    transition: 0.3s;
+    color:white;
+
+    padding:18px 35px;
+
+    border-radius:18px;
+    border:2px solid #262626;
+
+    font-size:1.2rem;
+
+    text-align:center;
+
+    transition:0.3s;
 }
 .project-card p{
     display: flex;
