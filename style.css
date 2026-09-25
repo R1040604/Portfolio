@@ -1435,62 +1435,6 @@ padding:20px;
 NEXT
 ====================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
-
-:root {
-    --purple: #59008f;
-    --purple-dark: #42006e;
-    --text: #242424;
-    --muted: #5e5e5e;
-    --soft-green: #dff0e3;
-    --radius: 18px;
-    --content-width: 1040px;
-    --side-padding: 56px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    color: var(--text);
-    background: #fff;
-    font-family: 'Nunito Sans', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.45;
-    overflow-x: hidden;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    z-index: -2;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at 8% 23%, rgba(131, 0, 223, .9) 0, rgba(131, 0, 223, .22) 4%, transparent 14%),
-        radial-gradient(circle at 94% 5%, rgba(156, 44, 220, .75) 0, rgba(156, 44, 220, .16) 7%, transparent 15%),
-        radial-gradient(circle at 92% 42%, rgba(23, 183, 60, .62) 0, rgba(23, 183, 60, .15) 6%, transparent 15%),
-        radial-gradient(circle at 95% 70%, rgba(255, 0, 144, .8) 0, rgba(255, 0, 144, .14) 7%, transparent 16%),
-        radial-gradient(circle at 4% 79%, rgba(111, 0, 211, .75) 0, rgba(111, 0, 211, .12) 6%, transparent 15%),
-        radial-gradient(circle at 95% 92%, rgba(20, 119, 255, .7) 0, rgba(20, 119, 255, .1) 7%, transparent 16%);
-    filter: blur(24px);
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    z-index: -1;
-    inset: 0;
-    pointer-events: none;
-    background: rgba(255, 255, 255, .7);
-}
-
 img {
     display: block;
     max-width: 100%;
