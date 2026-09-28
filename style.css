@@ -267,19 +267,15 @@ text-align: center;
 ========================= */
 
 .projects {
-
     max-width: 1400px;
     margin: auto;
-
     padding: 120px 60px;
-
     display: flex;
     justify-content: center;
     gap: 50px;
 }
 .project-link{
     text-decoration:none;
-
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -304,6 +300,9 @@ text-align: center;
 .project-title {
 text-align: center;
 margin-top: 20px;
+}
+.nextLogoStart img{
+    width: 50px;
 }
 
 .btn{
@@ -630,7 +629,7 @@ text-align: center;
         padding:18px;
     }
 
-    .footer-container {
+.footer-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -1463,9 +1462,6 @@ p {
     margin: 0 0 1.15rem;
 }
 
-header {
-    padding: 28px var(--side-padding) 0;
-}
 
 .case-study {
     width: min(calc(100% - 2 * var(--side-padding)), var(--content-width));
@@ -1622,7 +1618,11 @@ li {
     border-radius: var(--radius);
     box-shadow: 0 10px 24px rgba(0, 0, 0, .07);
 }
-
+.nextLogo{
+    display: inline-block;
+    align-items: center;
+    max-width: 500px;
+}
 @media (max-width: 900px) {
     :root {
         --side-padding: 34px;
@@ -1662,38 +1662,6 @@ li {
         padding-top: 20px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        color: var(--purple);
-        cursor: pointer;
-        font-size: 1.65rem;
-        line-height: 1;
-    }
-
-    .mobile-menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        max-width: 230px;
-        margin: 18px 0 0 auto;
-        padding: 14px;
-        background: rgba(255, 255, 255, .94);
-        border-radius: 14px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
-    }
-
-    .mobile-menu.open {
-        display: flex;
-    }
-
-    .mobile-menu a {
-        text-align: center;
-    }
 
     .case-study {
         width: min(calc(100% - 2 * var(--side-padding)), var(--content-width));
@@ -1767,18 +1735,5 @@ li {
     #slogan {
         margin: 22px auto 28px;
         font-size: 1.7rem;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
     }
 }
