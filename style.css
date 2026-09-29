@@ -355,13 +355,6 @@ text-decoration: none;
     font-size: 20px;
 }
 
-/* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
 body{
     background:#f2f2f2;
@@ -1443,27 +1436,31 @@ p {
     width: min(calc(100% - 2 * var(--side-padding)), var(--content-width));
     margin: 0 auto;
 }
-
 .project-header {
+    width: 100%;
     padding: 48px 0 72px;
     text-align: center;
 }
 
 .project-header h1 {
-    margin: 0 0 4px;
+    margin: 0 0 12px;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: .01em;
+    line-height: 1.2;
     text-align: center;
 }
 
-.subtitle {
-    margin: 0;
-    font-size: 1,5rem;
-    font-weight: 700;
+.project-header .subtitle {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    
     text-align: center;
 }
-
 .case-study > section {
     margin-bottom: 128px;
 }
