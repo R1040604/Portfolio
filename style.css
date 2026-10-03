@@ -1214,25 +1214,13 @@ body {
    HIGH FIDELITY
 ===================== */
 
-.gallery-four{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
-    gap:35px;
-    margin-top:50px;
-}
-
-.gallery-four img{
+.prototype-image{
     width:100%;
-    border-radius:10px;
-    transition:.3s;
+    max-width:900px;
+    margin:auto;
+    display:block;
+    border-radius: 20px;
 }
-
-.gallery-four img:hover{
-    transform:scale(1.04);
-}
-
 
 /* =====================
    TABLET
