@@ -946,24 +946,25 @@ body {
 }
 
 .purple-block {
-    background: #d2b2de;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 100px 0;
+  background: #d2b2de;
+  padding: 100px 24px;
 }
 
-.purple-block > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
+.purple-block__inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .purple-block img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.case-study .purple-block {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  align-items: center;
 }
 .dark-purple {
     background: #47035f;
