@@ -953,8 +953,12 @@ body {
 .purple-block__inner {
   max-width: 900px;
   margin: 0 auto;
+  align-items: center;
 }
-
+.purple-block__inner p{
+display: block;
+align-content: center;
+}
 .purple-block img {
   display: block;
   width: 100%;
