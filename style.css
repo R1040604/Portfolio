@@ -937,6 +937,53 @@ line-height: 1;
 /* =========================
    Wallpaper wedstrijd PAGINA
 ========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.purple-block {
+    background: #d2b2de;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 100px 0;
+}
+
+.purple-block > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.purple-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.dark-purple {
+    background: #47035f;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.dark-purple > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
 .process-wrapper{
     display:flex;
     align-items:center;
