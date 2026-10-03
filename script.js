@@ -1,23 +1,19 @@
-const hamburger = document.querySelector(".hamburger");
-const mobileMenu = document.querySelector(".mobile-menu");
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
 
 hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
+    const isOpen = mobileMenu.classList.toggle("active");
+
+    hamburger.setAttribute("aria-expanded", isOpen);
+    hamburger.textContent = isOpen ? "×" : "☰";
 });
 
-const blurs = document.querySelectorAll(".blur");
+const mobileLinks = mobileMenu.querySelectorAll("a");
 
-window.addEventListener("scroll", () => {
-
-    const scrollY = window.pageYOffset;
-
-    blurs.forEach((blur, index) => {
-
-        const speed = 0.3 + (index * 0.05);
-
-        blur.style.transform =
-            `translateY(${-scrollY * speed}px)`;
-
+mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.textContent = "☰";
     });
-
 });

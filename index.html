@@ -1,83 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- Achtergrond effecten -->
-<div class="blur blur-top-left"></div>
-<div class="blur blur-right"></div>
-<div class="blur blur-bottom-left"></div>
-
-<!-- Navigatie -->
-
-<header>
-    <nav class="navbar">
-        <a class="logo" href="index.html">Sarah</a>
-        <ul class="nav-links">
-
-            <li> <a href="projecten.html">Projecten</a></li>
-
-            <li><a href="overmij.html">Over Mij</a></li>
-        </ul>
-        <div class="hamburger">
-            ☰
-        </div>
-
-    </nav>
-
-    <div class="mobile-menu">
-        <a href="projecten.html">Projecten</a>
-        <a href="overmij.html"> Over Mij</a>
-    </div>
-</header>
-
-<!-- Hero -->
-
-<main class="hero">
-    <div class="hero-content">
-        <h2>Ontwerpen met de gebruiker centraal</h2>
-        <p>
-            Welkom in mijn portfolio. Hier deel ik projecten waarin ik digitale ervaringen ontwerp die vertrekken vanuit
-            de behoeften van de gebruiker.
-
-            Van onderzoek en wireframes tot interactieve prototypes en uitgewerkte interfaces: elk project laat zien hoe
-            ik stap voor stap tot een doordachte oplossing kom.
-        </p>
-        <p>
-            Ontdek mijn werk en krijg een inkijk in mijn ontwerpproces,
-
-            mijn keuzes en mijn groei als UX/UI-designer.
-
-        </p>
-
-        <div class="buttons">
-            <a class="btn" href="overmij.html">Leer me kennen</a>
-            <a class="btn" href="projecten.html"> Bekijk mijn projecten </a>
-        </div>
-    </div>
-</main>
-
-<footer>
-
-    <div class="footer-container">
-
-        <a href="index.html">Sarah</a>
-
-        <div class="footer-links">
-            <a href="overmij.html">Over mij</a>
-            <a href="projecten.html">Mijn projecten</a>
-        </div>
-
-    </div>
-
-</footer>
 
 <body>
 
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a class="logo" href="index.html">Sarah</a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="projecten.html">Projecten</a>
+                </li>
+                <li>
+                    <a href="overmij.html">Over Mij</a>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigatiemenu">
+                ☰
+            </button>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="projecten.html">Projecten</a>
+            <a href="overmij.html">Over Mij</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+
+                <h1>Ontwerpen met de gebruiker centraal</h1>
+
+                <p>
+                    Welkom in mijn portfolio. Hier deel ik projecten waarin ik digitale ervaringen ontwerp die
+                    vertrekken vanuit
+                    de behoeften van de gebruiker.
+                </p>
+
+                <p>
+                    Van onderzoek en wireframes tot interactieve prototypes en uitgewerkte interfaces: elk project laat
+                    zien hoe
+                    ik stap voor stap tot een doordachte oplossing kom.
+                </p>
+
+                <p>
+                    Ontdek mijn werk en krijg een inkijk in mijn ontwerpproces,
+                    mijn keuzes en mijn groei als UX/UI-designer.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button" href="overmij.html">Leer me kennen</a>
+                    <a class="button" href="projecten.html">Bekijk mijn projecten</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <h2>Over mij</h2>
+
+            <p>
+                Ik combineer creativiteit met een analytische blik. Ik werk graag samen, luister goed en sta open voor
+                feedback.
+                Omdat ik ook met HTML en CSS werk, denk ik al tijdens het ontwerpen mee over hoe een idee technisch tot
+                leven komt.
+            </p>
+
+            <a class="about-button" href="overmij.html">Lees meer</a>
+        </section>
+
+        <section class="skills" aria-label="Vaardigheden">
+            <span>Gebruikersonderzoek</span>
+            <span>Prototyping in figma</span>
+            <span>Wireframes</span>
+            <span>UI Design</span>
+            <span>Toegankelijkheid (WACG)</span>
+            <span>HTML + CSS</span>
+        </section>
+
+        <section class="pink-decoration" aria-labelledby="werk-titel">
+            <h2 id="werk-titel">Hoe ik werk</h2>
+
+            <div class="work-item">
+                <span class="work-line" aria-hidden="true"></span>
+
+                <div class="work-text">
+                    <h3>Toegankelijk</h3>
+                    <p>Mobile-first herontwerp van Cats &amp; Cups volgens WCAG AA.</p>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <span class="work-line" aria-hidden="true"></span>
+
+                <div class="work-text">
+                    <h3>Samenwerken</h3>
+                    <p>Groepsproject voor een echte klant: Project NEXT.</p>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <span class="work-line" aria-hidden="true"></span>
+
+                <div class="work-text">
+                    <h3>Onderzoek</h3>
+                    <p>Concurrentieanalyse en user research voor de Lumière Cinema app</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <a class="footer-logo" href="index.html">Sarah</a>
+
+            <div class="footer-links">
+                <a href="overmij.html">Over mij</a>
+                <a href="projecten.html">Mijn projecten</a>
+            </div>
+
+            <div class="contact">
+                <h2>Contact</h2>
+                <a href="mailto:sarah.elmazouki9@gmail.com">
+                    sarah.elmazoukik9@gmail.com
+                </a>
+
+                <a class="linkedin" href="#" aria-label="LinkedIn-profiel">
+                    in
+                </a>
+            </div>
+
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
