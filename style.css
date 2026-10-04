@@ -940,15 +940,22 @@ body {
 
 .purple-block {
   background: #d2b2de;
-  padding: 100px 24px;
+  width: 100vw;
+    padding: 120px 40px; /* Boven en onder ruime paarse witruimte */
+    box-sizing: border-box;
+    margin-left: calc(50% - 50vw);
 }
 
+.purple-block-content {
+    max-width: 900px;   /* Beperkt de breedte van de tekst net als op foto 2 */
+    margin: 0 auto;      /* Centreert het blok horizontaal */
+}
 /* Gewone blok: één kolom, gecentreerd (foto 4) */
 .purple-block__inner {
   max-width: 900px;
   margin: 0 auto;
 }
-
+/*
 .purple-block h2 {
   margin: 0 0 20px;
 }
@@ -956,6 +963,22 @@ body {
 .purple-block p {
   margin: 0 0 20px;
   line-height: 1.6;
+} */
+.purple-block-content h2,
+.purple-block-content h1 {
+    margin-top: 0;        /* Verwijdert de vervelende standaard browser-marge aan de bovenkant */
+    margin-bottom: 35px;  /* Ruimte tussen de titel en de tekst */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Styling voor de alinea binnen het paarse blok */
+.purple-block-content p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.6;     /* Zorgt voor fijne leesbaarheid van de regels */
+    color: #111111;
 }
 
 .purple-block img {
@@ -989,7 +1012,19 @@ body {
   max-width: none;
   margin-left: calc(50% - 50vw);
 }
+/* Bredere variant voor blokken met kaarten of twee kolommen */
+.purple-block-content--wide {
+    max-width: 1200px;
+}
+.purple-block--dark {
+    background: #7b2fa8;
+    width: 100vw;
+}
 
+.purple-block--dark h2,
+.purple-block--dark p {
+    color: #ffffff;
+}
 /* Mobiel: kolommen onder elkaar */
 @media (max-width: 768px) {
   .purple-block {
@@ -1017,6 +1052,24 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     box-sizing: border-box;
+}
+.purple-block {
+    padding: 120px 20px;
+    box-sizing: border-box;
+}
+
+.purple-block--dark {
+    background: #7b2fa8;
+}
+
+.purple-block--dark h2,
+.purple-block--dark p {
+    color: #ffffff;
+}
+
+.purple-block-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 /*
 .process-wrapper{
@@ -1092,6 +1145,7 @@ body {
     max-width:1000px;
     height:auto;
 }
+
 @media(max-width:1024px){
 
     .process-wrapper{
@@ -1557,7 +1611,36 @@ padding:20px;
 /* ======================
 NEXT
 ====================== */
+/* Gsm en tablet: onder elkaar */
+.statusLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.nextLogo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Desktop: naast elkaar */
+@media (min-width: 1024px) {
+    .statusLayout {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .statusTekst {
+        flex: 1;
+    }
+
+    .nextLogo {
+        width: 35%;
+        max-width: 350px;
+        flex-shrink: 0;
+    }
+}
 img {
     display: block;
     max-width: 100%;
