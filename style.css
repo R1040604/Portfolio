@@ -220,15 +220,33 @@ a {
 /* =========================
    SKILLS
 ========================= */
+/* =========================
+   SKILLS / WAT IK DOE
+========================= */
+
+.skills-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 30px;
+    color: #050505;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
 
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px 27px;
+    gap: 18px 20px;
     max-width: 520px;
-    margin: 155px auto 0;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .skills span {
@@ -236,7 +254,7 @@ a {
     align-items: center;
     justify-content: center;
     min-height: 39px;
-    padding: 8px 10px;
+    padding: 8px 14px;
     border: 1px solid #222222;
     border-radius: 9px;
     background-color: var(--light-purple);
@@ -244,6 +262,7 @@ a {
     font-size: 14px;
     white-space: nowrap;
 }
+
 
 /* =========================
    DECORATIE
