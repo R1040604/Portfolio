@@ -877,25 +877,62 @@ body {
   padding: 100px 24px;
 }
 
+/* Gewone blok: één kolom, gecentreerd (foto 4) */
 .purple-block__inner {
   max-width: 900px;
   margin: 0 auto;
-  align-items: center;
 }
-.purple-block__inner p{
-display: block;
-align-content: center;
+
+.purple-block h2 {
+  margin: 0 0 20px;
 }
+
+.purple-block p {
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
 .purple-block img {
   display: block;
   width: 100%;
   height: auto;
 }
+
+/* Twee kolommen (foto 3) */
+.purple-block__inner--columns {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.purple-block ol {
+  margin: 0 0 20px;
+  padding-left: 1.6em;
+  line-height: 1.6;
+}
+
+.purple-block li {
+  padding-left: 8px;
+}
+
+/* Full-width op case study-pagina's */
 .case-study .purple-block {
   width: 100vw;
   max-width: none;
   margin-left: calc(50% - 50vw);
-  align-items: center;
+}
+
+/* Mobiel: kolommen onder elkaar */
+@media (max-width: 768px) {
+  .purple-block {
+    padding: 60px 20px;
+  }
+  .purple-block__inner--columns {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 .dark-purple {
     background: #47035f;
