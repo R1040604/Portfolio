@@ -9,21 +9,27 @@
 </head>
 
 <body>
-    <div class="blur blur-top-left"></div>
-    <div class="blur blur-right"></div>
-    <div class="blur blur-bottom-left"></div>
-    <div class="blur blur-bottom-right"></div>
-    <header>
+    <header class="site-header">
         <nav class="navbar">
-            <a class="logo">Sarah</a>
+
+            <a class="logo" href="index.html">Sarah</a>
+
             <ul class="nav-links">
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="overmij.html">Over Mij</a></li>
+                <li>
+                    <a href="projecten.html">Projecten</a>
+                </li>
+                <li>
+                    <a href="overmij.html">Over Mij</a>
+                </li>
             </ul>
-            <div class="hamburger">☰</div>
+
+            <button class="hamburger" id="hamburger" aria-label="Open navigatiemenu">
+                ☰
+            </button>
         </nav>
-        <div class="mobile-menu">
-            <a href="projecten.html"> Projecten</a>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="projecten.html">Projecten</a>
             <a href="overmij.html">Over Mij</a>
         </div>
     </header>

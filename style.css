@@ -87,14 +87,12 @@ a {
 
     padding:20px;
     margin:0 20px 20px;
-
-    background:#9722d6;
     border-radius:15px;
 }
 
 .mobile-menu a{
-    background:white;
-    color:black;
+    background:#c93eff;
+    color:white;
     text-decoration:none;
 
     padding:15px;
@@ -745,193 +743,122 @@ body{
     color:black;
 }
 
-/* ABOUT */
+/* ABOUT  me */
 
 .about {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 40px;
 }
 
-.about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 60px;
+/* Intro: tekst links, portret rechts */
+.about-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 .about-text {
-    flex: 2;
-    max-width: 750px;
+  flex: 1;
+  max-width: 750px;
+  margin-left: 100px;
 }
 
-.about-image{
-    background-color: #d4b4e8; /* lichtpaars */
-    padding: 25px;
+.about-text h2,
+.about-tech h2,
+.hobby-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
 
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.about-text h2:not(:first-child) {
+  margin-top: 60px;
+}
+
+.about-text p,
+.about-tech p,
+.hobby-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-image {
+  background-color: #d4b4e8;
+  padding: 25px;
+  border-radius: 5px;
+  flex: 0 0 auto;
+  width: 300px;
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    display:block;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Creativiteit en techniek */
+.about-tech {
+  max-width: 900px;
+  margin: 120px 0 0 100px;
+}
+
+/* Buiten mijn studies */
+.about-hobby {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 120px;
+}
+
+.video-hobby {
+  background-color: #d4b4e8;
+  padding: 25px;
+  border-radius: 5px;
+  flex: 0 0 auto;
+}
+
+.video-hobby img {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+}
+
+.hobby-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Knop gecentreerd onder de tekst */
+.button-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-intro { flex-direction: column-reverse; align-items: center; }
+  .about-text,
+  .about-tech { margin-left: 0; max-width: 700px; }
+  .about-image { width: 280px; }
+  .about-hobby { flex-direction: column; gap: 50px; }
+}
+
+/* Mobiel */
+@media (max-width: 768px) {
+  .about { padding: 60px 20px; }
+  .about-text h2,
+  .about-tech h2,
+  .hobby-text h2 { font-size: 2rem; }
+  .about-text p,
+  .about-tech p,
+  .hobby-text p { text-align: left; line-height: 1.6; }
+  .about-tech { margin-top: 70px; }
+  .about-hobby { margin-top: 70px; }
 }
 
 
-.about-text h2 {
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
-
-.about-text p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-/* BUTTON */
-
-.button-container{
-    text-align:center;
-    margin-top:100px;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    color:white;
-    padding:20px 40px;
-    border-radius:18px;
-    background:linear-gradient(
-        to bottom,
-        #c93eff,
-        #7d1fb5
-    );
-    border:2px solid #222;
-    font-size:1.4rem;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-}
-
-@media (max-width:1024px){
-
-    .navbar{
-        padding:35px;
-    }
-
-    .about-container{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .about-content{
-        max-width:700px;
-    }
-
-    .about-content h2{
-        font-size:2.6rem;
-    }
-
-    .about-content p{
-        font-size:1.2rem;
-    }
-.about-container{
-flex-direction:column;
-text-align:left;
-gap:50px;
-}
-.about-image img{
-max-width:280px;
-}
-}
-
-@media (max-width:768px){
-    .projects {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-padding: 60px 20px;
-gap: 80px;
-}
-.about{
-padding:60px 20px;
-}
-.about-container{
-flex-direction:column;
-gap:40px;
-}
-.about-text h2{
-font-size:2rem;
-}
-.project-card {
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-
-    .navbar{
-        padding:25px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hamburger{
-        display:block;
-    }
-
-    .about-content{
-        padding:80px 25px;
-    }
-
-    .about-content h2{
-        font-size:2.3rem;
-        margin-bottom:40px;
-    }
-
-    .about-content p{
-        font-size:1rem;
-        line-height:1.45;
-        text-align:justify;
-    }
-
-    .btn{
-
-        width:100%;
-        text-align:center;
-        max-width:320px;
-        font-size:1rem;
-        padding:18px;
-    }
-
-.footer-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-gap: 50px;
-padding: 80px 20px;
-}
-.footer-container h2 {
-font-size: 4rem;
-line-height: 1;
-}
-}
 
 
 /* =========================
