@@ -928,7 +928,7 @@ body{
 
 
 /* =========================
-   Wallpaper wedstrijd PAGINA
+   Wallpaper challenge pagina
 ========================= */
 * {
     box-sizing: border-box;
@@ -938,452 +938,350 @@ body {
     margin: 0;
 }
 
-.purple-block {
-  background: #d2b2de;
-  width: 100vw;
-    padding: 120px 40px; /* Boven en onder ruime paarse witruimte */
-    box-sizing: border-box;
-    margin-left: calc(50% - 50vw);
+.case-study.wallpaper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
 }
 
-.purple-block-content {
-    max-width: 900px;   /* Beperkt de breedte van de tekst net als op foto 2 */
-    margin: 0 auto;      /* Centreert het blok horizontaal */
+.case-study.wallpaper h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 80px;
 }
-/* Gewone blok: één kolom, gecentreerd (foto 4) */
+
+/* gewone secties: smalle tekstkolom, gecentreerd */
+.case-study.wallpaper section {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding: 0;
+}
+
+.case-study.wallpaper h2 {
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+.case-study.wallpaper p {
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+.case-study.wallpaper ul {
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+/* ---------- Paarse kaarten ---------- */
+.case-study.wallpaper section.purple-block {
+    max-width: none;
+    width: 100%;
+    margin: 0 0 80px;
+    padding: 80px 40px;
+    background: #d2b2de;
+    border-radius: 20px;
+}
+
+.case-study.wallpaper section.purple-block--compact {
+    padding: 50px 40px;
+}
+
 .purple-block__inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-/*
-.purple-block h2 {
-  margin: 0 0 20px;
-}
-
-.purple-block p {
-  margin: 0 0 20px;
-  line-height: 1.6;
-} */
-.purple-block-content h2,
-.purple-block-content h1 {
-    margin-top: 0;        /* Verwijdert de vervelende standaard browser-marge aan de bovenkant */
-    margin-bottom: 35px;  /* Ruimte tussen de titel en de tekst */
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #111111;
-}
-
-/* Styling voor de alinea binnen het paarse blok */
-.purple-block-content p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.6;     /* Zorgt voor fijne leesbaarheid van de regels */
-    color: #111111;
-}
-
-.purple-block img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Twee kolommen (foto 3) */
-.purple-block__inner--columns {
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.purple-block ol {
-  margin: 0 0 20px;
-  padding-left: 1.6em;
-  line-height: 1.6;
-}
-
-.purple-block li {
-  padding-left: 8px;
-}
-
-/* Full-width op case study-pagina's */
-.case-study .purple-block {
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
-}
-/* Bredere variant voor blokken met kaarten of twee kolommen */
-.purple-block-content--wide {
-    max-width: 1200px;
-}
-.purple-block--dark {
-    background: #7b2fa8;
-    width: 100vw;
-}
-
-.purple-block--dark h2,
-.purple-block--dark p {
-    color: #ffffff;
-}
-/* Mobiel: kolommen onder elkaar */
-@media (max-width: 768px) {
-  .purple-block {
-    padding: 60px 20px;
-  }
-  .purple-block__inner--columns {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-}
-.dark-purple {
-    background: #47035f;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 100px 0;
-    box-sizing: border-box;
-}
-
-.dark-purple > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-}
-.purple-block {
-    padding: 120px 20px;
-    box-sizing: border-box;
-}
-
-.purple-block--dark {
-    background: #7b2fa8;
-}
-
-.purple-block--dark h2,
-.purple-block--dark p {
-    color: #ffffff;
-}
-
-.purple-block-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
-/*
-.process-wrapper{
-    display:flex;
-    align-items:center;
-    gap:80px;
+
+.case-study.wallpaper .purple-block h2 {
+    font-size: 1.8rem;
+    color: #111;
 }
 
-.process-content{
-    flex:1;
+.case-study.wallpaper .purple-block p,
+.case-study.wallpaper .purple-block li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #111;
 }
 
-.process-image{
-    flex-shrink:0;
-}
-
-.process-image img{
-    width:120px;
-    height:auto;
-} */
-.case-study{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 40px 120px;
-}
-
-.case-study h1{
-    text-align:center;
-    margin-bottom:60px;
-    font-size:2.5rem;
-}
-
-.case-study section{
-    margin-bottom:80px;
-}
-
-.case-study h2{
-    margin-bottom:20px;
-    font-size:1.5rem;
-}
-
-.case-study p{
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.case-study ul{
-    padding-left:25px;
-    line-height:1.8;
-}
-
-.small-image {
+.case-study.wallpaper .purple-block img {
     display: block;
-    width: 300px;
-    margin: 40px auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 40px auto 0;
+}
+
+/* ---------- Proces: tekst links, blaadje rechts ---------- */
+.process-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.process-content {
+    flex: 1;
+}
+
+.process-image {
+    flex-shrink: 0;
+}
+
+.process-image img {
+    width: 120px;
+    height: auto;
+}
+
+/* ---------- Eindresultaat-afbeelding ---------- */
+.case-study.wallpaper section.result {
+    max-width: none;
 }
 
 .result-image {
     display: block;
-    width: 50%;
-    max-width: 500px;
-    margin: 40px auto;
-}
-
-.process-section{
-    position:relative;
-}
-.result-image{
-    display:block;
-    margin:50px auto;
-
-    width:100%;
-    max-width:1000px;
-    height:auto;
-}
-
-@media(max-width:1024px){
-
-    .process-wrapper{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-    .process-image{
-        align-self:center;
-    }
-    .process-image img{
-        width:90px;
-    }
-    .case-study{
-        max-width:800px;
-        padding:60px 35px;
-    }
-    .case-study h1{
-        font-size:2rem;
-    }
-    .small-image{
-        width:250px;
-    }
-}
-@media(max-width:768px){
-
-    .case-study{
-    padding:40px 25px 80px;
-    }
-
-    .case-study h1{
-
-        font-size:1.6rem;
-        text-align:left;
-        margin-bottom:50px;
-    }
-
-    .case-study h2{
-   font-size:1.2rem;
-    }
-
-    .case-study p{
-
-        font-size:0.95rem;
-        line-height:1.6;
-    }
-
-    .case-study ul{
-
-        font-size:0.95rem;
-    }
-
-    .small-image{
-     width:100%;
-        max-width:250px;
-    }
-
-    .result-image{
-
-        width:80%;
-    }
-
-}
-/* =====================
-   CASE STUDY PAGINA lumiere app
-===================== */
-
-.case-study{
-    max-width:1200px;
-    margin:0 auto;
-    padding:80px 40px;
-}
-
-.case-study h1{
-    text-align:center;
-    font-size:3rem;
-    margin-bottom:120px;
-}
-
-.case-study section{
-    max-width:900px;
-    margin:0 auto 140px auto;
-}
-
-.case-study h2{
-    font-size:1.7rem;
-    margin-bottom:25px;
-}
-
-.case-study h3{
-    margin-bottom:15px;
-}
-
-.case-study p{
-    line-height:1.8;
-}
-
-.case-study ul{
-    padding-left:25px;
-    line-height:1.8;
-}
-
-/* =====================
-   EERSTE SCHERMEN
-===================== */
-
-.gallery-three{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    justify-items:center;
-    align-items:center;
-    margin-top:50px;
-}
-
-.gallery-three img{
-    width:100%;
-    max-width:240px;
-}
-
-/* =====================
-   RESEARCH
-===================== */
-
-.research-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    margin-top:40px;
-}
-
-.research-card{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-/* =====================
-   WIREFRAMES
-===================== */
-
-.wireframe-container{
-    display:flex;
-    justify-content:center;
-    margin-top:60px;
-}
-
-.wireframe-container img{
-    width:100%;
-    max-width:1100px;
-    border-radius:10px;
-}
-
-/* =====================
-   HIGH FIDELITY
-===================== */
-
-.prototype-image{
-    width:100%;
-    max-width:900px;
-    margin:auto;
-    display:block;
-    border-radius: 20px;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
 }
 
 /* =====================
    TABLET
 ===================== */
-
-@media(max-width:1024px){
-
-    .case-study{
-        padding:60px 30px;
+@media (max-width: 1024px) {
+    .case-study.wallpaper {
+        padding: 60px 30px 100px;
     }
 
-    .case-study h1{
-        font-size:2.3rem;
+    .case-study.wallpaper h1 {
+        font-size: 2rem;
     }
 
-    .gallery-three{
-        grid-template-columns:repeat(2,1fr);
+    .case-study.wallpaper section.purple-block {
+        padding: 60px 30px;
     }
 
-    .research-grid{
-        grid-template-columns:1fr;
+    /* blaadje onder de tekst */
+    .process-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
     }
 
-    .gallery-four{
-        grid-template-columns:repeat(2,1fr);
+    .process-image {
+        align-self: center;
+    }
+
+    .process-image img {
+        width: 90px;
     }
 }
 
 /* =====================
    GSM
 ===================== */
+@media (max-width: 768px) {
+    .case-study.wallpaper {
+        padding: 40px 20px 80px;
+    }
 
+    .case-study.wallpaper h1 {
+        font-size: 1.6rem;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .case-study.wallpaper section {
+        margin-bottom: 60px;
+    }
+
+    .case-study.wallpaper h2,
+    .case-study.wallpaper .purple-block h2 {
+        font-size: 1.3rem;
+    }
+
+    .case-study.wallpaper p,
+    .case-study.wallpaper li,
+    .case-study.wallpaper .purple-block p,
+    .case-study.wallpaper .purple-block li {
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+    .case-study.wallpaper section.purple-block {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .case-study.wallpaper section.purple-block--compact {
+        padding: 30px 20px;
+    }
+}
+/* =====================
+   CASE STUDY PAGINA LUMIERE
+===================== */
+
+/* main is nu volle breedte, de secties regelen zelf hun breedte */
+.case-study{
+    max-width:none;
+    margin:0;
+    padding:80px 0 0;
+}
+
+.case-study h1{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:120px;
+    padding:0 40px;
+}
+
+/* gewone secties: 900px gecentreerd */
+.case-study section{
+    max-width:900px;
+    margin:0 auto 140px auto;
+    padding:0 40px;
+    box-sizing:content-box;
+}
+
+/* paarse secties: volle breedte */
+.case-study section.purple-block{
+    max-width:none;
+    width:100%;
+    margin:0 0 140px 0;
+    padding:100px 40px;
+    box-sizing:border-box;
+}
+
+.purple-block{
+    background:#d2b2de;
+    border-radius: 16px;
+}
+
+.purple-block--dark{
+    background:#7b2fa8;
+}
+
+/* inhoud binnen het paarse blok centreren */
+.purple-block-content,
+.purple-block__inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.purple-block__inner--columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start;
+}
+
+/* tekststijl in de paarse blokken */
+.case-study .purple-block h2{
+    font-size:1.7rem;
+    margin-top:0;
+    margin-bottom:25px;
+    color:#111;
+}
+
+.case-study .purple-block p,
+.case-study .purple-block li{
+    font-size:1rem;
+    line-height:1.8;
+    color:#111;
+}
+
+.case-study .purple-block--dark h2,
+.case-study .purple-block--dark p{
+    color:#fff;
+}
+
+/* research: geen witte kaarten, zoals in je ontwerp */
+.research-card{
+    background:transparent;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+}
+
+/* =====================
+   TABLET
+===================== */
+@media(max-width:1024px){
+
+    .case-study{
+        padding:60px 0 0;
+    }
+
+    .case-study h1{
+        font-size:2.3rem;
+        padding:0 30px;
+    }
+
+    .case-study section{
+        padding:0 30px;
+    }
+
+    .case-study section.purple-block{
+        padding:80px 30px;
+    }
+
+    /* foto's onder elkaar */
+    .gallery-three{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-three img{
+        max-width:280px;
+    }
+
+    .research-grid,
+    .purple-block__inner--columns{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+}
+
+/* =====================
+   GSM
+===================== */
 @media(max-width:768px){
 
     .case-study{
-        padding:40px 20px;
+        padding:40px 0 0;
     }
 
     .case-study h1{
         font-size:1.8rem;
         text-align:left;
         margin-bottom:70px;
+        padding:0 20px;
     }
 
     .case-study section{
+        padding:0 20px;
         margin-bottom:90px;
     }
 
-    .case-study h2{
+    .case-study section.purple-block{
+        padding:60px 20px;
+        margin-bottom:90px;
+    }
+
+    .case-study h2,
+    .case-study .purple-block h2{
         font-size:1.3rem;
     }
 
     .case-study p,
-    .case-study li{
+    .case-study li,
+    .case-study .purple-block p,
+    .case-study .purple-block li{
         font-size:.95rem;
-    }
-
-    .gallery-three,
-    .gallery-four{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-three img,
-    .gallery-four img{
-        max-width:280px;
-        margin:auto;
     }
 
     .wireframe-container img{
         width:100%;
     }
 }
-
-
 /* ======================
 CASE STUDY kattencafé
 ====================== */
