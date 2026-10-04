@@ -928,7 +928,7 @@ body{
 
 
 /* =========================
-   Wallpaper challenge pagina
+   Wallpaper wedstrijd PAGINA
 ========================= */
 * {
     box-sizing: border-box;
@@ -938,183 +938,275 @@ body {
     margin: 0;
 }
 
-.case-study.wallpaper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 40px 120px;
+.purple-block {
+  background: #d2b2de;
+  width: 100vw;
+    padding: 120px 40px; /* Boven en onder ruime paarse witruimte */
+    box-sizing: border-box;
+    margin-left: calc(50% - 50vw);
 }
 
-.case-study.wallpaper h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 80px;
+.purple-block-content {
+    max-width: 900px;   /* Beperkt de breedte van de tekst net als op foto 2 */
+    margin: 0 auto;      /* Centreert het blok horizontaal */
 }
-
-/* gewone secties: smalle tekstkolom, gecentreerd */
-.case-study.wallpaper section {
-    max-width: 800px;
-    margin: 0 auto 80px;
-    padding: 0;
-}
-
-.case-study.wallpaper h2 {
-    font-size: 1.5rem;
-    margin: 0 0 20px;
-}
-
-.case-study.wallpaper p {
-    line-height: 1.8;
-    margin: 0 0 15px;
-}
-
-.case-study.wallpaper ul {
-    padding-left: 25px;
-    line-height: 1.8;
-}
-
-/* ---------- Paarse kaarten ---------- */
-.case-study.wallpaper section.purple-block {
-    max-width: none;
-    width: 100%;
-    margin: 0 0 80px;
-    padding: 80px 40px;
-    background: #d2b2de;
-    border-radius: 20px;
-}
-
-.case-study.wallpaper section.purple-block--compact {
-    padding: 50px 40px;
-}
-
+/* Gewone blok: één kolom, gecentreerd (foto 4) */
 .purple-block__inner {
-    max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/*
+.purple-block h2 {
+  margin: 0 0 20px;
+}
+
+.purple-block p {
+  margin: 0 0 20px;
+  line-height: 1.6;
+} */
+.purple-block-content h2,
+.purple-block-content h1 {
+    margin-top: 0;        /* Verwijdert de vervelende standaard browser-marge aan de bovenkant */
+    margin-bottom: 35px;  /* Ruimte tussen de titel en de tekst */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Styling voor de alinea binnen het paarse blok */
+.purple-block-content p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.6;     /* Zorgt voor fijne leesbaarheid van de regels */
+    color: #111111;
+}
+
+.purple-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Twee kolommen (foto 3) */
+.purple-block__inner--columns {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.purple-block ol {
+  margin: 0 0 20px;
+  padding-left: 1.6em;
+  line-height: 1.6;
+}
+
+.purple-block li {
+  padding-left: 8px;
+}
+
+/* Full-width op case study-pagina's */
+.case-study .purple-block {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+}
+/* Bredere variant voor blokken met kaarten of twee kolommen */
+.purple-block-content--wide {
+    max-width: 1200px;
+}
+.purple-block--dark {
+    background: #7b2fa8;
+    width: 100vw;
+}
+
+.purple-block--dark h2,
+.purple-block--dark p {
+    color: #ffffff;
+}
+/* Mobiel: kolommen onder elkaar */
+@media (max-width: 768px) {
+  .purple-block {
+    padding: 60px 20px;
+  }
+  .purple-block__inner--columns {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+.dark-purple {
+    background: #47035f;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.dark-purple > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+.purple-block {
+    padding: 120px 20px;
+    box-sizing: border-box;
+}
+
+.purple-block--dark {
+    background: #7b2fa8;
+}
+
+.purple-block--dark h2,
+.purple-block--dark p {
+    color: #ffffff;
+}
+
+.purple-block-content {
+    max-width: 900px;
     margin: 0 auto;
 }
-
-.case-study.wallpaper .purple-block h2 {
-    font-size: 1.8rem;
-    color: #111;
+/*
+.process-wrapper{
+    display:flex;
+    align-items:center;
+    gap:80px;
 }
 
-.case-study.wallpaper .purple-block p,
-.case-study.wallpaper .purple-block li {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #111;
+.process-content{
+    flex:1;
 }
 
-.case-study.wallpaper .purple-block img {
+.process-image{
+    flex-shrink:0;
+}
+
+.process-image img{
+    width:120px;
+    height:auto;
+} */
+.case-study{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 40px 120px;
+}
+
+.case-study h1{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.5rem;
+}
+
+.case-study section{
+    margin-bottom:80px;
+}
+
+.case-study h2{
+    margin-bottom:20px;
+    font-size:1.5rem;
+}
+
+.case-study p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.case-study ul{
+    padding-left:25px;
+    line-height:1.8;
+}
+
+.small-image {
     display: block;
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    margin: 40px auto 0;
-}
-
-/* ---------- Proces: tekst links, blaadje rechts ---------- */
-.process-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.process-content {
-    flex: 1;
-}
-
-.process-image {
-    flex-shrink: 0;
-}
-
-.process-image img {
-    width: 120px;
-    height: auto;
-}
-
-/* ---------- Eindresultaat-afbeelding ---------- */
-.case-study.wallpaper section.result {
-    max-width: none;
+    width: 300px;
+    margin: 40px auto;
 }
 
 .result-image {
     display: block;
-    width: 100%;
-    max-width: none;
-    height: auto;
-    margin: 0;
+    width: 50%;
+    max-width: 500px;
+    margin: 40px auto;
 }
 
-/* =====================
-   TABLET
-===================== */
-@media (max-width: 1024px) {
-    .case-study.wallpaper {
-        padding: 60px 30px 100px;
-    }
+.process-section{
+    position:relative;
+}
+.result-image{
+    display:block;
+    margin:50px auto;
 
-    .case-study.wallpaper h1 {
-        font-size: 2rem;
-    }
-
-    .case-study.wallpaper section.purple-block {
-        padding: 60px 30px;
-    }
-
-    /* blaadje onder de tekst */
-    .process-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-    }
-
-    .process-image {
-        align-self: center;
-    }
-
-    .process-image img {
-        width: 90px;
-    }
+    width:100%;
+    max-width:1000px;
+    height:auto;
 }
 
-/* =====================
-   GSM
-===================== */
-@media (max-width: 768px) {
-    .case-study.wallpaper {
-        padding: 40px 20px 80px;
+@media(max-width:1024px){
+
+    .process-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .process-image{
+        align-self:center;
+    }
+    .process-image img{
+        width:90px;
+    }
+    .case-study{
+        max-width:800px;
+        padding:60px 35px;
+    }
+    .case-study h1{
+        font-size:2rem;
+    }
+    .small-image{
+        width:250px;
+    }
+}
+@media(max-width:768px){
+
+    .case-study{
+    padding:40px 25px 80px;
     }
 
-    .case-study.wallpaper h1 {
-        font-size: 1.6rem;
-        text-align: left;
-        margin-bottom: 50px;
+    .case-study h1{
+
+        font-size:1.6rem;
+        text-align:left;
+        margin-bottom:50px;
     }
 
-    .case-study.wallpaper section {
-        margin-bottom: 60px;
+    .case-study h2{
+   font-size:1.2rem;
     }
 
-    .case-study.wallpaper h2,
-    .case-study.wallpaper .purple-block h2 {
-        font-size: 1.3rem;
+    .case-study p{
+
+        font-size:0.95rem;
+        line-height:1.6;
     }
 
-    .case-study.wallpaper p,
-    .case-study.wallpaper li,
-    .case-study.wallpaper .purple-block p,
-    .case-study.wallpaper .purple-block li {
-        font-size: .95rem;
-        line-height: 1.6;
+    .case-study ul{
+
+        font-size:0.95rem;
     }
 
-    .case-study.wallpaper section.purple-block {
-        padding: 40px 20px;
-        border-radius: 16px;
+    .small-image{
+     width:100%;
+        max-width:250px;
     }
 
-    .case-study.wallpaper section.purple-block--compact {
-        padding: 30px 20px;
+    .result-image{
+
+        width:80%;
     }
+
 }
 /* =====================
    CASE STUDY PAGINA LUMIERE
@@ -1509,36 +1601,14 @@ padding:20px;
 /* ======================
 NEXT
 ====================== */
-/* Gsm en tablet: onder elkaar */
-.statusLayout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
+/* ======================
+   NEXT
+   Vervang het volledige NEXT-gedeelte in style.css hiermee.
+   Alles is gescoped met .case-study.next, zodat het niet botst
+   met de Lumière- en Wallpaper-pagina's.
+====================== */
 
-.nextLogo {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Desktop: naast elkaar */
-@media (min-width: 1024px) {
-    .statusLayout {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .statusTekst {
-        flex: 1;
-    }
-
-    .nextLogo {
-        width: 35%;
-        max-width: 350px;
-        flex-shrink: 0;
-    }
-}
+/* ---------- Basis ---------- */
 img {
     display: block;
     max-width: 100%;
@@ -1552,44 +1622,6 @@ a {
 
 p {
     margin: 0 0 1.15rem;
-}
-
-
-.case-study {
-    width: min(calc(100% - 2 * var(--side-padding)), var(--content-width));
-    margin: 0 auto;
-}
-.project-header {
-    width: 100%;
-    padding: 48px 0 72px;
-    text-align: center;
-}
-
-.project-header h1 {
-    margin: 0 0 12px;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.project-header .subtitle {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.4;
-    
-    text-align: center;
-}
-.case-study > section {
-    margin-bottom: 128px;
-}
-
-.case-study > section:first-of-type {
-    margin-bottom: 130px;
 }
 
 h2 {
@@ -1614,6 +1646,74 @@ li {
     margin-bottom: .15rem;
 }
 
+/* ---------- Pagina-container ---------- */
+.case-study.next {
+    width: min(calc(100% - 2 * var(--side-padding, 40px)), var(--content-width, 1000px));
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.case-study.next > section {
+    max-width: none;
+    margin: 0 0 128px;
+    padding: 0;
+}
+
+.case-study.next > section:first-of-type {
+    margin-bottom: 130px;
+}
+
+.case-study.next h2 {
+    margin: 0 0 22px;
+    font-size: 1.18rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.case-study.next h3 {
+    margin: 0 0 16px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.case-study.next p {
+    margin: 0 0 1.15rem;
+    line-height: 1.7;
+}
+
+.case-study.next ul {
+    margin: 0 0 1.15rem 1.2rem;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* ---------- Header van de pagina ---------- */
+.case-study.next .project-header {
+    width: 100%;
+    padding: 48px 0 72px;
+    text-align: center;
+}
+
+.case-study.next .project-header h1 {
+    margin: 0 0 12px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.case-study.next .project-header .subtitle {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ---------- Over NEXT: tekst + zijbeeld ---------- */
 .two-column {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(260px, .75fr);
@@ -1631,63 +1731,68 @@ li {
 
 .side-image img {
     width: min(100%, 270px);
-    border-radius: var(--radius);
+    border-radius: var(--radius, 14px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
 }
 
-.gallery-two,
-.gallery-three,
-.gallery-four,
-.implementation-gallery {
+/* ---------- Galerijen ---------- */
+.case-study.next .gallery-two,
+.case-study.next .gallery-three,
+.case-study.next .gallery-four,
+.case-study.next .implementation-gallery {
     display: grid;
     align-items: start;
+    justify-items: stretch;
     gap: 34px;
     margin-top: 42px;
 }
 
-.gallery-two {
+.case-study.next .gallery-two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.gallery-three {
+.case-study.next .gallery-three {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.gallery-four {
+.case-study.next .gallery-four {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
 }
 
-.implementation-gallery {
+.case-study.next .implementation-gallery {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 14px;
 }
 
-.gallery-two img,
-.gallery-three img,
-.gallery-four img,
-.implementation-gallery img {
+.case-study.next .gallery-two img,
+.case-study.next .gallery-three img,
+.case-study.next .gallery-four img,
+.case-study.next .implementation-gallery img {
     width: 100%;
-    border-radius: var(--radius);
+    max-width: none;
+    margin: 0;
+    border-radius: var(--radius, 14px);
     object-fit: contain;
     box-shadow: 0 9px 24px rgba(0, 0, 0, .06);
 }
 
-.case-study > section > img:not(.side-image img) {
+/* ruimte onder galerijen die niet als laatste staan */
+.case-study.next .gallery-two:not(:last-child),
+.case-study.next .gallery-three:not(:last-child),
+.case-study.next .gallery-four:not(:last-child) {
+    margin-bottom: 42px;
+}
+
+/* losse brede afbeeldingen in een sectie */
+.case-study.next > section > img {
     width: 100%;
     margin-top: 38px;
-    border-radius: var(--radius);
+    border-radius: var(--radius, 14px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
 }
 
-#slogan {
-    max-width: 680px;
-    margin: 25px auto 34px;
-    text-align: center;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.18;
-}
-
+/* ---------- Wireframes & high-fidelity iteraties ---------- */
 .wireframe-gallery,
 .iteration-gallery {
     display: grid;
@@ -1711,15 +1816,106 @@ li {
 .wireframe-card img,
 .iteration-card img {
     width: 100%;
-    border-radius: var(--radius);
+    border-radius: var(--radius, 14px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, .07);
 }
-.nextLogo{
-    display: inline-block;
-    align-items: center;
-    max-width: 500px;
+
+/* ---------- Paarse kaarten ---------- */
+.case-study.next .purple-block {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 80px 40px;
+    background: #d2b2de;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
-@media (max-width: 900px) {
+
+/* kaart die direct in main staat heeft zelf geen extra marge nodig */
+.case-study.next > section.purple-block {
+    margin-bottom: 128px;
+}
+
+.case-study.next .purple-block__inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.case-study.next .purple-block h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+.case-study.next .purple-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #111;
+}
+
+.case-study.next .purple-block p:last-child {
+    margin-bottom: 0;
+}
+
+.case-study.next .purple-block img {
+    width: 100%;
+    margin: 40px 0 0;
+    border-radius: var(--radius, 14px);
+}
+
+/* slogan-kaart */
+.case-study.next .purple-block--slogan {
+    padding: 60px 40px;
+    margin: 30px 0 40px;
+}
+
+.case-study.next #slogan {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.18;
+}
+
+/* ---------- Status: logo naast tekst (desktop), eronder (tablet/gsm) ---------- */
+.statusLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.statusTekst {
+    flex: 1;
+}
+
+.nextLogo {
+    display: block;
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+@media (min-width: 1025px) {
+    .statusLayout {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .nextLogo {
+        width: 35%;
+        max-width: 350px;
+        flex-shrink: 0;
+        align-self: center;
+    }
+}
+
+/* =====================
+   TABLET
+===================== */
+@media (max-width: 1024px) {
     :root {
         --side-padding: 34px;
     }
@@ -1728,27 +1924,60 @@ li {
         font-size: 15px;
     }
 
-    .case-study > section {
+    .case-study.next > section,
+    .case-study.next > section.purple-block {
         margin-bottom: 96px;
     }
 
+    /* Over NEXT: foto onder de tekst */
     .two-column {
+        display: flex;
+        flex-direction: column;
         gap: 38px;
     }
 
-    .gallery-four {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .side-image {
+        width: 100%;
+        align-items: center;
     }
 
-    .implementation-gallery {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* alle foto's onder elkaar */
+    .case-study.next .gallery-two,
+    .case-study.next .gallery-three,
+    .case-study.next .gallery-four,
+    .case-study.next .implementation-gallery,
+    .wireframe-gallery,
+    .iteration-gallery {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 30px;
     }
 
-    .implementation-gallery img:last-child {
-        grid-column: 2;
+    .case-study.next .gallery-two img,
+    .case-study.next .gallery-three img,
+    .case-study.next .gallery-four img,
+    .case-study.next .implementation-gallery img,
+    .wireframe-card,
+    .iteration-card {
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wireframe-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .case-study.next .purple-block {
+        padding: 60px 30px;
     }
 }
 
+/* =====================
+   GSM
+===================== */
 @media (max-width: 640px) {
     :root {
         --side-padding: 22px;
@@ -1758,78 +1987,51 @@ li {
         padding-top: 20px;
     }
 
-
-    .case-study {
-        width: min(calc(100% - 2 * var(--side-padding)), var(--content-width));
-    }
-
-    .project-header {
+    .case-study.next .project-header {
         padding: 42px 0 58px;
     }
 
-    .project-header h1 {
+    .case-study.next .project-header h1 {
         font-size: 1.12rem;
     }
 
-    .subtitle {
+    .case-study.next .project-header .subtitle {
         font-size: .94rem;
     }
 
-    .case-study > section,
-    .case-study > section:first-of-type {
+    .case-study.next > section,
+    .case-study.next > section:first-of-type,
+    .case-study.next > section.purple-block {
         margin-bottom: 76px;
     }
 
-    h2 {
+    .case-study.next h2 {
         font-size: 1.1rem;
     }
 
-    .two-column {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-    }
-
-    .side-image {
-        width: 100%;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 14px;
-        overflow-x: auto;
-    }
-
     .side-image img {
-        flex: 0 0 75%;
-        width: 75%;
+        width: min(100%, 270px);
     }
 
-    .gallery-two,
-    .gallery-three,
-    .gallery-four,
-    .implementation-gallery,
-    .wireframe-gallery,
-    .iteration-gallery {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        margin-top: 30px;
+    .case-study.next .purple-block {
+        padding: 40px 20px;
+        border-radius: 16px;
     }
 
-    .gallery-four,
-    .implementation-gallery {
-        gap: 18px;
+    .case-study.next .purple-block h2 {
+        font-size: 1.3rem;
     }
 
-    .implementation-gallery img:last-child,
-    .wireframe-card:last-child {
-        grid-column: auto;
+    .case-study.next .purple-block p {
+        font-size: .95rem;
+        line-height: 1.6;
     }
 
-    .wireframe-card:last-child {
-        width: 100%;
+    .case-study.next .purple-block--slogan {
+        padding: 40px 20px;
     }
 
-    #slogan {
-        margin: 22px auto 28px;
+    .case-study.next #slogan {
         font-size: 1.7rem;
     }
 }
