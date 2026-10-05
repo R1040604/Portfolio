@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sarah-el-marzouki-portfolio.vercel.app/sitemap.xml
