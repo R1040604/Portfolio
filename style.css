@@ -43,64 +43,54 @@ a {
 /* =========================
    NAVIGATIE
 ========================= */
-
-    .site-header {
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-}
-.hamburger{
-    display:none;
-    font-size:2rem;
-    cursor:pointer;
-    background:none;
-    border:none;
-}
-.nav-links a{
-    text-decoration:none;
-    color:white !important;
-
-    background: var(--purple);
-
-    padding:15px 25px;
-
-    border-radius:18px;
-    border:2px solid #262626;
-
-    font-size:1.2rem;
-
-    transition:0.3s;
+    padding: 20px 40px;
+    box-sizing: border-box;
 }
 
-.nav-links a:hover{
-    transform:translateY(-3px);
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-/* standaard verborgen */
-.mobile-menu{
-    display:none;
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
 }
 
-/* zichtbaar wanneer JS active toevoegt */
-.mobile-menu.active{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+/* Tablet en gsm: links verbergen, hamburger tonen */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 30px;
+    }
 
-    padding:20px;
-    margin:0 20px 20px;
-    border-radius:15px;
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 
-.mobile-menu a{
-    background:#c93eff;
-    color:white;
-    text-decoration:none;
-
-    padding:15px;
-    border-radius:10px;
-
-    text-align:center;
+@media (max-width: 640px) {
+    .navbar {
+        padding: 20px;   /* gelijk aan de zijmarge van je hero-tekst */
+    }
 }
-
 /* =========================
    HERO
 ========================= */
