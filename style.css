@@ -95,9 +95,6 @@ a {
    HERO
 ========================= */
 
-/* =========================
-   HERO
-========================= */
 .hero {
     display: flex;
     justify-content: center;
@@ -354,7 +351,99 @@ a {
     font-size: 14px;
     line-height: 1.35;
 }
+.site-footer {
+    background: #520084;
+    color: #fff;
+    padding: 60px 40px 24px;
+}
 
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-brand p {
+    margin: 0;
+    color: rgba(255, 255, 255, .85);
+}
+
+.site-footer h2 {
+    margin: 0 0 16px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-links,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/* wit icoon met paarse "in": goed contrast */
+.linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-top: 6px;
+    background: #fff;
+    color: #520084 !important;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.footer-copy {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .8);
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
 /* =========================
    FOOTER
 ========================= */
