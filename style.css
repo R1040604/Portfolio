@@ -1334,11 +1334,11 @@ body {
     }
 
 }
+
 /* =====================
    CASE STUDY PAGINA LUMIERE
 ===================== */
 
-/* main is nu volle breedte, de secties regelen zelf hun breedte */
 .case-study{
     max-width:none;
     margin:0;
@@ -1360,18 +1360,18 @@ body {
     box-sizing:content-box;
 }
 
-/* paarse secties: volle breedte */
+/* paarse secties: breed, met ruimte aan de zijkanten */
 .case-study section.purple-block{
-    max-width:none;
-    width:100%;
-    margin:0 0 140px 0;
+    max-width:1300px;
+    width:calc(100% - 100px);
+    margin:0 auto 140px auto;
     padding:100px 40px;
     box-sizing:border-box;
 }
 
 .purple-block{
     background:#d2b2de;
-    border-radius: 16px;
+    border-radius:16px;
 }
 
 .purple-block--dark{
@@ -1384,12 +1384,22 @@ body {
     max-width:1100px;
     margin:0 auto;
 }
+.purple-block__inner > h2{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-.purple-block__inner--columns{
+/* twee kolommen naast elkaar (desktop) */
+.purple-block__inner--columns,
+.research-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:80px;
     align-items:start;
+}
+
+.research-grid{
+    margin-top:40px;
 }
 
 /* tekststijl in de paarse blokken */
@@ -1397,6 +1407,12 @@ body {
     font-size:1.7rem;
     margin-top:0;
     margin-bottom:25px;
+    color:#111;
+}
+
+.case-study .purple-block h3{
+    font-size:1.5rem;
+    margin:0 0 20px;
     color:#111;
 }
 
@@ -1412,12 +1428,39 @@ body {
     color:#fff;
 }
 
-/* research: geen witte kaarten, zoals in je ontwerp */
+/* research: geen witte kaarten */
 .research-card{
     background:transparent;
     box-shadow:none;
     border-radius:0;
     padding:0;
+}
+
+/* 3 foto's naast elkaar (desktop) */
+.gallery-three{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    align-items:start;
+}
+
+.gallery-three img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* wireframes + prototype */
+.wireframe-container,
+.prototype-image{
+    margin-top:40px;
+}
+
+.wireframe-container img,
+.prototype-image img{
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 /* =====================
@@ -1439,18 +1482,22 @@ body {
     }
 
     .case-study section.purple-block{
+        width:calc(100% - 60px);
         padding:80px 30px;
     }
 
     /* foto's onder elkaar */
     .gallery-three{
         grid-template-columns:1fr;
+        justify-items:center;
+        gap:30px;
     }
 
     .gallery-three img{
         max-width:280px;
     }
 
+    /* tekstblokken onder elkaar */
     .research-grid,
     .purple-block__inner--columns{
         grid-template-columns:1fr;
@@ -1480,6 +1527,7 @@ body {
     }
 
     .case-study section.purple-block{
+        width:calc(100% - 40px);
         padding:60px 20px;
         margin-bottom:90px;
     }
@@ -1489,6 +1537,10 @@ body {
         font-size:1.3rem;
     }
 
+    .case-study .purple-block h3{
+        font-size:1.2rem;
+    }
+
     .case-study p,
     .case-study li,
     .case-study .purple-block p,
@@ -1496,9 +1548,13 @@ body {
         font-size:.95rem;
     }
 
-    .wireframe-container img{
-        width:100%;
+    .gallery-three img{
+        max-width:100%;
     }
+    .purple-block__inner > h2{
+    text-align:left;
+    margin-bottom:30px;
+}
 }
 /* ======================
    CATS & CUPS (kattencafé)
