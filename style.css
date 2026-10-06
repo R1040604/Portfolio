@@ -942,6 +942,25 @@ body{
   margin: 0 auto;
   padding: 100px 40px;
 }
+.about > h1 {
+    max-width: 1200px;
+    margin: 0 auto 55px;
+    padding: 70px 64px 0;
+    text-align: center;
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    line-height: 1.1;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* Intro: tekst links, portret rechts */
 .about-intro {
