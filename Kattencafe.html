@@ -197,15 +197,16 @@
             </div>
         </section>
 
-        <!-- 8. Video prototype -->
         <section class="prototype">
             <h2>Video prototype</h2>
 
             <div class="prototype-frame">
-                <!-- Heb je een video? Vervang de img door:
-                     <video controls src="images/prototype.mp4"></video> -->
-                <video src="images/Kattencafé highfi.mp4"
-                    alt="Prototype van de Cats &amp; Cups website op mobiel"></video>
+                <video controls playsinline preload="metadata" poster="images/kattencafe-poster.png"
+                    aria-label="Prototype van de Cats & Cups website op mobiel">
+                    <source src="images/Kattencafé highfi.mp4" type="video/mp4">
+                    Je browser ondersteunt geen video.
+                    <a href="images/kattencafe-highfi.mp4">Download de video</a>.
+                </video>
             </div>
         </section>
 
