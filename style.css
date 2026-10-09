@@ -1043,8 +1043,47 @@ body{
 
 /* Knop gecentreerd onder de tekst */
 .button-container {
-  text-align: center;
+  --knop-breedte: 240px;
+  display: grid;
+  grid-template-columns: repeat(2, var(--knop-breedte));
+  justify-content: center;
+  gap: 16px 20px;
   margin-top: 60px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;      /* tekst verticaal in het midden */
+  justify-content: center;  /* tekst horizontaal in het midden */
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: 0 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.button-container .btn {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+/* derde knop: onder de twee andere, even breed en gecentreerd */
+.button-container .btn:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: var(--knop-breedte);
+}
+
+/* gsm: alles onder elkaar, volle breedte */
+@media (max-width: 600px) {
+  .button-container {
+    grid-template-columns: 1fr;
+  }
+  .button-container .btn:nth-child(3) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+  }
 }
 
 /* Tablet */
