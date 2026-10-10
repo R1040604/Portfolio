@@ -2069,7 +2069,17 @@ li {
     margin: 0 0 128px;
     padding: 0;
 }
+.case-study p a {
+    color: #6a2494;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
 
+.case-study p a:hover,
+.case-study p a:focus-visible {
+    color: #a62ee0;
+}
 .case-study.next > section:first-of-type {
     margin-bottom: 130px;
 }
