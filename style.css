@@ -458,13 +458,12 @@ a {
     max-width:1400px;
     margin:0 auto;
 
-    padding:100px 80px;
+    padding: 0px 80px 100px;  /* boven kleiner, onder en zijkanten blijven gelijk */
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
-
 /* Elke kolom even breed */
 .footer-container > *{
     flex:1;
