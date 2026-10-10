@@ -2588,3 +2588,66 @@ li {
 @media (max-width: 600px) {
     .projects-more .button { width: 100%; }
 }
+.hero {
+    position: relative;
+}
+ 
+/* Je tekst en knoppen komen boven de decoratie */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+ 
+.hero-decor {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;       /* niets zorgt voor een horizontale scrollbalk */
+    pointer-events: none;   /* klikken gaan gewoon door naar de knoppen */
+}
+ 
+/* Zachte kleurvlekken in de hoeken */
+.hero-blob {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+}
+.hero-blob--1 {
+    top: -200px;
+    left: -180px;
+    background: radial-gradient(circle, rgba(155, 20, 134, 0.35), transparent 70%);
+}
+.hero-blob--2 {
+    top: -170px;
+    right: -180px;
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.30), transparent 70%);
+}
+ 
+/* Bloemblaadjes: grootte, draaiing en vertraging komen uit de HTML */
+.petal {
+    position: absolute;
+    width: var(--s, 28px);
+    height: calc(var(--s, 28px) * 1.4);
+    border-radius: 50% 0 50% 50%;
+    background: linear-gradient(160deg, #f9d0f2, #d98be6);
+    opacity: 0.75;
+    transform: rotate(var(--r, 0deg));
+    animation: petal-float 9s ease-in-out infinite;
+    animation-delay: var(--d, 0s);
+}
+ 
+@keyframes petal-float {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50%      { transform: translateY(-14px) rotate(calc(var(--r, 0deg) + 8deg)); }
+}
+ 
+/* Smalle schermen: blaadjes weg zodat ze nooit over je tekst liggen */
+@media (max-width: 1000px) {
+    .petal { display: none; }
+}
+ 
+/* Geen beweging voor wie dat niet wil */
+@media (prefers-reduced-motion: reduce) {
+    .petal { animation: none; }
+}
