@@ -1218,42 +1218,7 @@ body {
     gap: 50px;
   }
 }
-.dark-purple {
-    background: #47035f;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 100px 0;
-    box-sizing: border-box;
-}
 
-.dark-purple > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-}
-.purple-block {
-    padding: 120px 20px;
-    box-sizing: border-box;
-}
-
-.purple-block--dark {
-    background: #7b2fa8;
-}
-
-.purple-block--dark h2,
-.purple-block--dark p {
-    color: #ffffff;
-}
-
-.purple-block-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
 /*
 .process-wrapper{
     display:flex;
