@@ -2576,3 +2576,15 @@ li {
     min-height: 64px;
     text-align: center;
 }
+.projects-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.projects-more .button {
+    min-width: 260px;
+}
+@media (max-width: 600px) {
+    .projects-more .button { width: 100%; }
+}
