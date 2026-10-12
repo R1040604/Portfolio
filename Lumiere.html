@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Cookie-standaard: tot er gekozen is, geen analytics-cookies -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGHJYCXK6S"></script>
     <script>
@@ -236,8 +247,7 @@
             </div>
 
         </div>
-
-        <p class="footer-copy">© 2026 Sarah</p>
+        <p class="footer-copy">© 2026 Sarah · <a href="#" data-cookie-settings>Cookie-instellingen</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
