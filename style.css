@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
     background: var(--background);
     color: var(--dark);
-    font-family: Helvetica, sans-serif;
+    font-family: arial, sans-serif;
     background-color: white;
 }
 
