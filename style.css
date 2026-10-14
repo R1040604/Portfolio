@@ -70,6 +70,9 @@ a {
     border: none;
     color: inherit;
 }
+.logo{
+    text-decoration:none;
+}
 
 /* Tablet en gsm: links verbergen, hamburger tonen */
 @media (max-width: 1024px) {
