@@ -2030,153 +2030,317 @@ body {
 NEXT
 ====================== */
 
-/* ---------- Basis ---------- */
-img {
+/* ======================
+   NEXT — PROJECTPAGINA
+====================== */
+
+/* ---------- Lokale basis ---------- */
+
+.case-study.next {
+    --next-purple: #c9a4d6;
+    --next-text: #292929;
+    --next-link: #ae48cb;
+    --next-radius: 12px;
+    --next-text-width: 690px;
+    --next-section-gap: 110px;
+
+    box-sizing: border-box;
     display: block;
-    max-width: 100%;
-    height: auto;
+
+    width: min(82%, 1000px);
+    max-width: none;
+
+    margin: 0 auto;
+    padding: 42px 0 150px;
+
+    color: var(--next-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: left;
 }
 
-a {
+.case-study.next *,
+.case-study.next *::before,
+.case-study.next *::after {
+    box-sizing: border-box;
+}
+
+.case-study.next img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    box-shadow: none;
+}
+
+.case-study.next h1,
+.case-study.next h2,
+.case-study.next h3,
+.case-study.next p,
+.case-study.next ul {
     color: inherit;
+}
+
+.case-study.next h1,
+.case-study.next h2,
+.case-study.next h3 {
+    padding: 0;
+    font-family: inherit;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.case-study.next h2 {
+    margin: 0 0 32px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.case-study.next h3 {
+    margin: 0 0 22px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.case-study.next p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.case-study.next p:last-child {
+    margin-bottom: 0;
+}
+
+.case-study.next ul {
+    margin: 0 0 22px;
+    padding-left: 21px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.case-study.next li {
+    margin: 0 0 2px;
+}
+
+.case-study.next p a {
+    color: var(--next-link);
+    font-weight: 400;
     text-decoration: none;
 }
 
-p {
-    margin: 0 0 1.15rem;
-}
-
-h2 {
-    margin: 0 0 22px;
-    font-size: 1.18rem;
-    line-height: 1.2;
-    font-weight: 800;
-}
-
-h3 {
-    margin: 0 0 16px;
-    font-size: 1rem;
-    font-weight: 800;
-}
-
-ul {
-    margin: 0 0 1.15rem 1.2rem;
-    padding: 0;
-}
-
-li {
-    margin-bottom: .15rem;
-}
-
-/* ---------- Pagina-container ---------- */
-.case-study.next {
-    width: min(calc(100% - 2 * var(--side-padding, 40px)), var(--content-width, 1000px));
-    max-width: none;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.case-study.next > section {
-    max-width: none;
-    margin: 0 0 128px;
-    padding: 0;
-}
-.case-study p a {
-    color: #6a2494;
-    font-weight: 600;
+.case-study.next p a:hover,
+.case-study.next p a:focus-visible {
+    color: #792599;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.case-study p a:hover,
-.case-study p a:focus-visible {
-    color: #a62ee0;
-}
-.case-study.next > section:first-of-type {
-    margin-bottom: 130px;
-}
+/* ---------- Algemene sectie-opbouw ---------- */
 
-.case-study.next h2 {
-    margin: 0 0 22px;
-    font-size: 1.18rem;
-    line-height: 1.2;
-    font-weight: 800;
-}
-
-.case-study.next h3 {
-    margin: 0 0 16px;
-    font-size: 1rem;
-    font-weight: 800;
-}
-
-.case-study.next p {
-    margin: 0 0 1.15rem;
-    line-height: 1.7;
-}
-
-.case-study.next ul {
-    margin: 0 0 1.15rem 1.2rem;
-    padding: 0;
-    line-height: 1.7;
-}
-
-/* ---------- Header van de pagina ---------- */
-.case-study.next .project-header {
+.case-study.next > section {
+    display: block;
     width: 100%;
-    padding: 48px 0 72px;
-    text-align: center;
+    max-width: none;
+
+    margin: 0 0 var(--next-section-gap);
+    padding: 0;
+}
+
+.case-study.next > section:last-child {
+    margin-bottom: 0;
+}
+
+.case-study.next .text-content {
+    width: min(100%, var(--next-text-width));
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ---------- Intro: titel, overzicht en logo ---------- */
+
+.case-study.next .project-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 230px;
+    grid-template-areas:
+        "title logo"
+        "overview logo";
+
+    align-items: start;
+    column-gap: 56px;
+    row-gap: 54px;
+
+    width: calc(100% - 100px);
+    margin: 0 0 58px 100px;
+}
+
+.case-study.next .project-header {
+    grid-area: title;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .case-study.next .project-header h1 {
-    margin: 0 0 12px;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: left;
 }
 
 .case-study.next .project-header .subtitle {
+    display: block;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    text-align: left;
+}
+
+.case-study.next .project-overview {
+    grid-area: overview;
+
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.case-study.next .project-overview h2 {
+    margin-bottom: 36px;
+}
+
+.case-study.next .intro-logo {
+    grid-area: logo;
+    align-self: start;
+    justify-self: center;
+
+    width: 210px;
+    max-width: 100%;
+    margin-top: 24px;
+}
+
+/* ---------- Paarse kaarten ---------- */
+
+.case-study.next .purple-block {
+    display: block;
+    width: 100%;
+    max-width: none;
+
+    margin-left: 0;
+    margin-right: 0;
+    padding: 32px 40px;
+
+    background: var(--next-purple);
+    border-radius: var(--next-radius);
+    box-shadow: none;
+}
+
+.case-study.next > section.purple-block {
+    padding: 32px 40px;
+    margin-bottom: 84px;
+}
+
+.case-study.next .purple-block__inner {
+    width: min(100%, var(--next-text-width));
+    max-width: none;
     margin: 0 auto;
     padding: 0;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: center;
 }
 
-/* ---------- Over NEXT: tekst + zijbeeld ---------- */
-.two-column {
+.case-study.next .purple-block h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.case-study.next .purple-block p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.case-study.next .purple-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Opdracht: beide alinea's vormen één compact tekstblok. */
+
+.case-study.next > section.purple-block p {
+    margin-bottom: 0;
+}
+
+/* ---------- De uitdaging ---------- */
+
+.case-study.next .two-column {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(260px, .75fr);
+    grid-template-columns: minmax(0, 1fr) 300px;
     align-items: start;
-    gap: 72px;
+    gap: 80px;
+
+    margin-bottom: 110px;
 }
 
-.side-image {
+.case-study.next .text-column {
+    min-width: 0;
+}
+
+.case-study.next .text-column h2 {
+    margin-bottom: 34px;
+}
+
+.case-study.next .text-column p {
+    margin-bottom: 0;
+}
+
+.case-study.next .side-image {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    padding-top: 12px;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
 }
 
-.side-image img {
-    width: min(100%, 270px);
-    border-radius: var(--radius, 14px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+.case-study.next .side-image img {
+    width: 265px;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: none;
 }
 
-/* ---------- Galerijen ---------- */
+/* ---------- Algemene galerijen ---------- */
+
 .case-study.next .gallery-two,
 .case-study.next .gallery-three,
 .case-study.next .gallery-four,
 .case-study.next .implementation-gallery {
     display: grid;
     align-items: start;
-    justify-items: stretch;
-    gap: 34px;
-    margin-top: 42px;
+    gap: 28px;
+
+    width: 100%;
+    margin: 58px 0 0;
+    padding: 0;
 }
 
 .case-study.next .gallery-two {
@@ -2189,12 +2353,7 @@ li {
 
 .case-study.next .gallery-four {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.case-study.next .implementation-gallery {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 14px;
+    gap: 26px;
 }
 
 .case-study.next .gallery-two img,
@@ -2202,269 +2361,644 @@ li {
 .case-study.next .gallery-four img,
 .case-study.next .implementation-gallery img {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
+    height: auto;
+
     margin: 0;
-    border-radius: var(--radius, 14px);
-    object-fit: contain;
-    box-shadow: 0 9px 24px rgba(0, 0, 0, .06);
+    border-radius: 12px;
+    box-shadow: none;
 }
 
-/* ruimte onder galerijen die niet als laatste staan */
-.case-study.next .gallery-two:not(:last-child),
-.case-study.next .gallery-three:not(:last-child),
-.case-study.next .gallery-four:not(:last-child) {
-    margin-bottom: 42px;
+/* ---------- Researchbrochures ---------- */
+
+.case-study.next .research-section {
+    margin-bottom: 74px;
 }
 
-/* losse brede afbeeldingen in een sectie */
-.case-study.next > section > img {
-    width: 100%;
-    margin-top: 38px;
-    border-radius: var(--radius, 14px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
-}
-
-/* ---------- Wireframes & high-fidelity iteraties ---------- */
-.wireframe-gallery,
-.iteration-gallery {
-    display: grid;
+.case-study.next .brochure-gallery {
+    width: min(100%, 640px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 58px 70px;
-    margin-top: 58px;
+    gap: 84px;
+
+    margin: 125px auto 0;
 }
 
-.wireframe-card,
-.iteration-card {
-    min-width: 0;
-    text-align: center;
+.case-study.next .brochure-gallery img {
+    border-radius: 16px;
 }
 
-.wireframe-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 35px);
-    justify-self: center;
+/* ---------- Inhoud en eerste sitemap ---------- */
+
+.case-study.next .information-section {
+    margin-bottom: 76px;
 }
 
-.wireframe-card img,
-.iteration-card img {
-    width: 100%;
-    border-radius: var(--radius, 14px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .07);
+.case-study.next .navigation-structure {
+    width: min(100%, 660px);
+    max-width: 100%;
+
+    margin: 36px auto 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-/* ---------- Paarse kaarten ---------- */
-.case-study.next .purple-block {
-    width: 100%;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 80px 40px;
-    background: #d2b2de;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
+/* ---------- Eerste visuele richting ---------- */
 
-/* kaart die direct in main staat heeft zelf geen extra marge nodig */
-.case-study.next > section.purple-block {
-    margin-bottom: 128px;
-}
-
-.case-study.next .purple-block__inner {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.case-study.next .purple-block h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: #111;
-}
-
-.case-study.next .purple-block p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #111;
-}
-
-.case-study.next .purple-block p:last-child {
+.case-study.next .visual-direction .text-content p {
     margin-bottom: 0;
 }
 
-.case-study.next .purple-block img {
-    width: 100%;
-    margin: 40px 0 0;
-    border-radius: var(--radius, 14px);
+.case-study.next .visual-direction-gallery {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 2.7fr)
+        minmax(0, 1fr)
+        minmax(0, 0.8fr);
+
+    align-items: start;
+    gap: 24px;
+
+    width: 92%;
+    margin: 60px auto 0;
 }
 
-/* slogan-kaart */
+.case-study.next .visual-direction-gallery > img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.case-study.next .first-logo-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    gap: 30px;
+
+    padding: 5px 0 20px;
+}
+
+.case-study.next .first-logo-gallery img {
+    width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+/* ---------- Branding en logostudies ---------- */
+
+.case-study.next .branding-section .gallery-four {
+    width: 92%;
+    margin: 58px auto 76px;
+}
+
+.case-study.next .logo-explanation {
+    margin-bottom: 0;
+}
+
+.case-study.next .logo-gallery {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 50px;
+
+    width: 92%;
+    margin: 58px auto 90px;
+}
+
+.case-study.next .logo-variations {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 0;
+}
+
+.case-study.next .logo-variations img,
+.case-study.next .logo-gallery > img {
+    width: 100%;
+    border-radius: 0;
+}
+
+/* ---------- Slogan ---------- */
+
+.case-study.next .slogan-label {
+    margin-bottom: 18px;
+}
+
 .case-study.next .purple-block--slogan {
-    padding: 60px 40px;
-    margin: 30px 0 40px;
+    margin: 0 0 42px;
+    padding: 32px 30px;
 }
 
 .case-study.next #slogan {
     max-width: 680px;
     margin: 0 auto;
+
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+    font-weight: 500;
     text-align: center;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.18;
 }
 
-/* ---------- Status: logo naast tekst (desktop), eronder (tablet/gsm) ---------- */
-.statusLayout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* ---------- Informatiearchitectuur ---------- */
+
+.case-study.next .architecture-section {
+    margin-bottom: 64px;
 }
 
-.statusTekst {
-    flex: 1;
+.case-study.next .architecture-section h2 {
+    margin-bottom: 24px;
 }
 
-.nextLogo {
-    display: block;
-    align-self: center;
+.case-study.next .navigation-preview {
     width: 100%;
-    max-width: 300px;
+    margin: 58px 0 0;
+    padding: 15px;
+
+    background: var(--next-purple);
+    border-radius: 14px;
+}
+
+.case-study.next .navigation-preview img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* ---------- Wireframes en high-fidelity ---------- */
+
+.case-study.next .wireframes-section .text-content p {
+    margin-bottom: 0;
+}
+
+.case-study.next .wireframe-gallery,
+.case-study.next .iteration-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 66px 80px;
+
+    width: 100%;
+    margin: 70px 0 0;
+    padding: 0;
+}
+
+.case-study.next .wireframe-card,
+.case-study.next .iteration-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.case-study.next .wireframe-card img,
+.case-study.next .iteration-card img {
+    width: 100%;
+    max-width: 100%;
     height: auto;
+
+    border-radius: 16px;
+    box-shadow: none;
 }
 
-@media (min-width: 1025px) {
-    .statusLayout {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .nextLogo {
-        width: 35%;
-        max-width: 350px;
-        flex-shrink: 0;
-        align-self: center;
-    }
+.case-study.next .wireframe-card h3,
+.case-study.next .iteration-card h3 {
+    text-align: center;
 }
 
-/* =====================
+/* Centreer de laatste kaart alleen bij een oneven aantal. */
+
+.case-study.next .wireframe-card:last-child:nth-child(odd),
+.case-study.next .iteration-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 62%;
+}
+
+/* High-fidelity heeft een smallere paarse kaart. */
+
+.case-study.next .purple-block--compact {
+    width: min(100%, 730px);
+    margin: 0 auto;
+    padding: 30px 65px;
+}
+
+.case-study.next .purple-block--compact h2 {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.case-study.next .iteration-gallery {
+    margin-top: 72px;
+    row-gap: 100px;
+}
+
+/* ---------- Implementatie ---------- */
+
+.case-study.next .implementation-gallery {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+
+    width: 96%;
+    margin: 110px auto 0;
+}
+
+.case-study.next .implementation-gallery img {
+    border-radius: 10px;
+}
+
+/* ---------- Status met logo rechts ---------- */
+
+.case-study.next .status-section {
+    margin-top: 130px;
+    margin-bottom: 145px;
+}
+
+.case-study.next .statusLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 230px;
+    align-items: center;
+    gap: 70px;
+
+    width: calc(100% - 100px);
+    margin: 0 0 0 100px;
+}
+
+.case-study.next .statusTekst {
+    min-width: 0;
+}
+
+.case-study.next .statusTekst p {
+    margin-bottom: 20px;
+}
+
+.case-study.next .statusTekst p:last-child {
+    margin-bottom: 0;
+}
+
+.case-study.next .nextLogo {
+    align-self: center;
+    justify-self: center;
+
+    width: 205px;
+    max-width: 100%;
+    height: auto;
+
+    margin: 0;
+}
+
+/* ---------- Bijdrage en reflectie ---------- */
+
+.case-study.next .contribution-section {
+    margin-bottom: 125px;
+}
+
+.case-study.next .contribution-section h2,
+.case-study.next .reflection-section h2 {
+    margin-bottom: 28px;
+}
+
+.case-study.next .reflection-section p {
+    margin-bottom: 0;
+}
+
+/* ======================
    TABLET
-===================== */
-@media (max-width: 1024px) {
-    :root {
-        --side-padding: 34px;
+====================== */
+
+@media (max-width: 900px) {
+
+    .case-study.next {
+        --next-section-gap: 82px;
+
+        width: 86%;
+        padding-top: 35px;
+        padding-bottom: 100px;
     }
 
-    body {
-        font-size: 15px;
+    .case-study.next .project-intro {
+        grid-template-columns: minmax(0, 1fr) 180px;
+        column-gap: 30px;
+        row-gap: 35px;
+
+        width: 100%;
+        margin-left: 0;
     }
 
-    .case-study.next > section,
+    .case-study.next .intro-logo {
+        width: 170px;
+    }
+
+    .case-study.next .project-header h1 {
+        font-size: 27px;
+    }
+
+    .case-study.next h2,
+    .case-study.next .purple-block h2 {
+        font-size: 27px;
+    }
+
+    .case-study.next .two-column {
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 35px;
+        margin-bottom: 82px;
+    }
+
+    .case-study.next .side-image img {
+        width: 220px;
+    }
+
+    .case-study.next .purple-block,
     .case-study.next > section.purple-block {
-        margin-bottom: 96px;
+        padding: 28px 34px;
     }
 
-    /* Over NEXT: foto onder de tekst */
-    .two-column {
-        display: flex;
-        flex-direction: column;
-        gap: 38px;
+    .case-study.next .brochure-gallery {
+        width: 85%;
+        gap: 45px;
+        margin-top: 75px;
     }
 
-    .side-image {
+    .case-study.next .visual-direction-gallery {
         width: 100%;
-        align-items: center;
+        gap: 18px;
     }
 
-    /* alle foto's onder elkaar */
-    .case-study.next .gallery-two,
-    .case-study.next .gallery-three,
-    .case-study.next .gallery-four,
-    .case-study.next .implementation-gallery,
-    .wireframe-gallery,
-    .iteration-gallery {
-        grid-template-columns: 1fr;
+    .case-study.next .branding-section .gallery-four {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .case-study.next .logo-gallery {
+        width: 100%;
+        gap: 30px;
+        margin-bottom: 65px;
+    }
+
+    .case-study.next .wireframe-gallery,
+    .case-study.next .iteration-gallery {
+        gap: 50px 35px;
+    }
+
+    .case-study.next .purple-block--compact {
+        padding: 30px 40px;
+    }
+
+    .case-study.next .implementation-gallery {
+        width: 100%;
+        gap: 10px;
+        margin-top: 75px;
+    }
+
+    .case-study.next .status-section {
+        margin-top: 90px;
+        margin-bottom: 95px;
+    }
+
+    .case-study.next .statusLayout {
+        grid-template-columns: minmax(0, 1fr) 180px;
+        gap: 35px;
+
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .case-study.next .nextLogo {
+        width: 170px;
+    }
+
+    .case-study.next .contribution-section {
+        margin-bottom: 90px;
+    }
+}
+
+/* ======================
+   GSM
+====================== */
+
+@media (max-width: 640px) {
+
+    .case-study.next {
+        --next-section-gap: 64px;
+
+        width: calc(100% - 36px);
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .case-study.next p,
+    .case-study.next ul,
+    .case-study.next .purple-block p {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .case-study.next h2,
+    .case-study.next .purple-block h2 {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .case-study.next h3 {
+        font-size: 25px;
+    }
+
+    /* Op mobiel: titel, logo en overzicht onder elkaar. */
+
+    .case-study.next .project-intro {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "title"
+            "logo"
+            "overview";
+
         gap: 28px;
-        margin-top: 30px;
+        margin-bottom: 45px;
     }
 
-    .case-study.next .gallery-two img,
-    .case-study.next .gallery-three img,
-    .case-study.next .gallery-four img,
-    .case-study.next .implementation-gallery img,
-    .wireframe-card,
-    .iteration-card {
+    .case-study.next .project-header h1 {
+        font-size: 27px;
+    }
+
+    .case-study.next .intro-logo {
+        justify-self: start;
+        width: 125px;
+        margin-top: 0;
+    }
+
+    .case-study.next .project-overview h2 {
+        margin-bottom: 20px;
+    }
+
+    .case-study.next .purple-block,
+    .case-study.next > section.purple-block {
+        padding: 26px 22px;
+        border-radius: 12px;
+    }
+
+    .case-study.next > section.purple-block {
+        margin-bottom: 64px;
+    }
+
+    .case-study.next .two-column {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        margin-bottom: 64px;
+    }
+
+    .case-study.next .text-column h2 {
+        margin-bottom: 20px;
+    }
+
+    .case-study.next .side-image {
+        padding-top: 0;
+    }
+
+    .case-study.next .side-image img {
+        width: min(75%, 260px);
+    }
+
+    .case-study.next .research-section,
+    .case-study.next .information-section,
+    .case-study.next .architecture-section {
+        margin-bottom: 64px;
+    }
+
+    .case-study.next .brochure-gallery {
         width: 100%;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 40px;
     }
 
-    .wireframe-card:last-child {
+    .case-study.next .navigation-structure {
+        margin-top: 25px;
+    }
+
+    .case-study.next .visual-direction-gallery {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+        gap: 18px;
+        margin-top: 32px;
+    }
+
+    .case-study.next .moodboard-image {
+        grid-column: 1 / -1;
+    }
+
+    .case-study.next .first-logo-gallery {
+        justify-content: space-around;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .case-study.next .gallery-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .case-study.next .branding-section .gallery-four {
+        gap: 25px 16px;
+        margin-top: 35px;
+        margin-bottom: 42px;
+    }
+
+    .case-study.next .logo-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+
+    .case-study.next .logo-variations {
+        gap: 25px;
+    }
+
+    .case-study.next .purple-block--slogan {
+        margin-bottom: 30px;
+        padding: 30px 16px;
+    }
+
+    .case-study.next #slogan {
+        margin: 0;
+        font-size: clamp(25px, 6.5vw, 34px);
+        line-height: 1.3;
+    }
+
+    .case-study.next .navigation-preview {
+        margin-top: 32px;
+        padding: 9px;
+    }
+
+    .case-study.next .navigation-preview img {
+        border-radius: 8px;
+    }
+
+    .case-study.next .wireframe-gallery,
+    .case-study.next .iteration-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+        margin-top: 38px;
+    }
+
+    .case-study.next .wireframe-card:last-child:nth-child(odd),
+    .case-study.next .iteration-card:last-child:nth-child(odd) {
         grid-column: auto;
         width: 100%;
     }
 
-    .case-study.next .purple-block {
-        padding: 60px 30px;
-    }
-}
-
-/* =====================
-   GSM
-===================== */
-@media (max-width: 640px) {
-    :root {
-        --side-padding: 22px;
+    .case-study.next .wireframe-card h3,
+    .case-study.next .iteration-card h3 {
+        margin-bottom: 16px;
     }
 
-    header {
-        padding-top: 20px;
+    .case-study.next .purple-block--compact {
+        width: 100%;
+        padding: 26px 22px;
     }
 
-    .case-study.next .project-header {
-        padding: 42px 0 58px;
+    .case-study.next .purple-block--compact h2 {
+        text-align: left;
     }
 
-    .case-study.next .project-header h1 {
-        font-size: 1.12rem;
+    .case-study.next .implementation-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 14px;
+        margin-top: 40px;
     }
 
-    .case-study.next .project-header .subtitle {
-        font-size: .94rem;
+    .case-study.next .implementation-gallery > img:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 7px);
     }
 
-    .case-study.next > section,
-    .case-study.next > section:first-of-type,
-    .case-study.next > section.purple-block {
-        margin-bottom: 76px;
+    .case-study.next .status-section {
+        margin-top: 0;
+        margin-bottom: 64px;
     }
 
-    .case-study.next h2 {
-        font-size: 1.1rem;
+    .case-study.next .statusLayout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
     }
 
-    .side-image img {
-        width: min(100%, 270px);
+    .case-study.next .nextLogo {
+        justify-self: center;
+        width: 145px;
     }
 
-    .case-study.next .purple-block {
-        padding: 40px 20px;
-        border-radius: 16px;
+    .case-study.next .contribution-section {
+        margin-bottom: 64px;
     }
 
-    .case-study.next .purple-block h2 {
-        font-size: 1.3rem;
+    .case-study.next .contribution-section h2,
+    .case-study.next .reflection-section h2 {
+        margin-bottom: 22px;
     }
 
-    .case-study.next .purple-block p {
-        font-size: .95rem;
-        line-height: 1.6;
+    .case-study.next .reflection-section p {
+        margin-bottom: 16px;
     }
 
-    .case-study.next .purple-block--slogan {
-        padding: 40px 20px;
-    }
-
-    .case-study.next #slogan {
-        font-size: 1.7rem;
+    .case-study.next .reflection-section p:last-child {
+        margin-bottom: 0;
     }
 }
 /* =====================
