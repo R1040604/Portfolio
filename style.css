@@ -2075,86 +2075,42 @@ NEXT
 
 /* NEXT: bredere titel en wat meer ademruimte */
 
-.case-study.next .project-intro {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-        "title"
-        "overview"
-        "illustration";
-
-    /* Gebruik de volledige breedte van de paginacontainer */
-    width: 100%;
-    max-width: none;
-
-    margin: 0 auto 60px;
-    padding: 0;
-
-    row-gap: 32px;
+/* Container in het midden */
+ .case-study.next .project-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Titel mag over de beschikbare paginabreedte lopen */
-
-.case-study.next .project-intro .project-header,
-.case-study.next .project-intro .project-header h1 {
+/* Titel */
+.case-study.next .project-intro .project-header {
     width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-
-    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.case-study.next .project-intro .project-header .subtitle {
-    display: block;
-    width: 100%;
-    max-width: none;
-
-    margin: 6px 0 0;
-    padding: 0;
-
-    text-align: left;
-    white-space: normal;
-}
-
-/* Tekst blijft smaller voor een overzichtelijke indeling */
-
+/* Tekstblok */
 .case-study.next .project-intro .project-overview {
     width: 100%;
     max-width: 690px;
-
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
 }
 
-.case-study.next .project-intro .project-overview h2 {
-    margin: 0 0 18px;
-}
-
-.case-study.next .project-intro .project-overview p {
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Foto blijft even breed als het projectoverzicht */
-
+/* Afbeelding */
 .case-study.next .project-intro .project-intro-image {
     width: 100%;
     max-width: 690px;
-
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
 }
 
 .case-study.next .project-intro-image img {
     display: block;
     width: 100%;
     height: auto;
-    align-self: center;
     border-radius: 20px;
-    margin: 0;
+margin: 40px;
+margin-bottom:60px;
 }
-
 /* Iets compactere tussenruimte op mobiel */
 
 @media (max-width: 640px) {
