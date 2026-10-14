@@ -2033,10 +2033,6 @@ body {
 NEXT
 ====================== */
 
-/* ======================
-   NEXT — PROJECTPAGINA
-====================== */
-
 /* ---------- Lokale basis ---------- */
 
 .case-study.next {
@@ -2492,10 +2488,9 @@ NEXT
 .case-study.next #slogan {
     max-width: 680px;
     margin: 0 auto;
-
     font-size: clamp(30px, 4vw, 42px);
     line-height: 1.25;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
 }
 
