@@ -2066,164 +2066,146 @@ NEXT
     box-sizing: border-box;
 }
 
-.case-study.next img {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    height: auto;
+/* NEXT: introductie zonder logo, met illustratie onder de tekst */
+/* NEXT: compactere introductie en links uitgelijnde titel */
 
-    margin: 0;
-    padding: 0;
-
-    border: 0;
-    box-shadow: none;
+.case-study.next {
+    padding-top: 20px;
 }
 
-.case-study.next h1,
-.case-study.next h2,
-.case-study.next h3,
-.case-study.next p,
-.case-study.next ul {
-    color: inherit;
-}
-
-.case-study.next h1,
-.case-study.next h2,
-.case-study.next h3 {
-    padding: 0;
-    font-family: inherit;
-    font-style: normal;
-    letter-spacing: normal;
-    text-transform: none;
-}
-
-.case-study.next h2 {
-    margin: 0 0 32px;
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 600;
-}
-
-.case-study.next h3 {
-    margin: 0 0 22px;
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 500;
-}
-
-.case-study.next p {
-    margin: 0 0 18px;
-    font-size: 15px;
-    line-height: 1.2;
-}
-
-.case-study.next p:last-child {
-    margin-bottom: 0;
-}
-
-.case-study.next ul {
-    margin: 0 0 22px;
-    padding-left: 21px;
-    font-size: 15px;
-    line-height: 1.2;
-}
-
-.case-study.next li {
-    margin: 0 0 2px;
-}
-
-.case-study.next p a {
-    color: var(--next-link);
-    font-weight: 400;
-    text-decoration: none;
-}
-
-.case-study.next p a:hover,
-.case-study.next p a:focus-visible {
-    color: #792599;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-/* ---------- Algemene sectie-opbouw ---------- */
-
-.case-study.next > section {
-    display: block;
-    width: 100%;
-    max-width: none;
-
-    margin: 0 0 var(--next-section-gap);
-    padding: 0;
-}
-
-.case-study.next > section:last-child {
-    margin-bottom: 0;
-}
-
-.case-study.next .text-content {
-    width: min(100%, var(--next-text-width));
-    max-width: none;
-    margin: 0 auto;
-    padding: 0;
-}
-
-/* ---------- Intro: titel, overzicht en logo ---------- */
+/* NEXT: bredere titel en wat meer ademruimte */
 
 .case-study.next .project-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 230px;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-        "title logo"
-        "overview logo";
+        "title"
+        "overview"
+        "illustration";
 
-    align-items: start;
-    column-gap: 56px;
-    row-gap: 54px;
+    /* Gebruik de volledige breedte van de paginacontainer */
+    width: 100%;
+    max-width: none;
 
-    width: calc(100% - 100px);
-    margin: 0 0 58px 100px;
+    margin: 0 auto 60px;
+    padding: 0;
+
+    row-gap: 32px;
 }
 
-.case-study.next .project-header {
-    grid-area: title;
-    width: 100%;
+/* Titel mag over de beschikbare paginabreedte lopen */
 
+.case-study.next .project-intro .project-header,
+.case-study.next .project-intro .project-header h1 {
+    width: 100%;
+    max-width: none;
     margin: 0;
     padding: 0;
+
     text-align: left;
 }
 
-.case-study.next .project-header h1 {
-    margin: 0;
-    font-size: 30px;
-    line-height: 1.3;
-    font-weight: 600;
-    text-align: left;
-}
-
-.case-study.next .project-header .subtitle {
+.case-study.next .project-intro .project-header .subtitle {
     display: block;
-    width: auto;
-
-    margin: 0;
-    padding: 0;
-
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    text-align: left;
-}
-
-.case-study.next .project-overview {
-    grid-area: overview;
-
     width: 100%;
+    max-width: none;
+
+    margin: 6px 0 0;
+    padding: 0;
+
+    text-align: left;
+    white-space: normal;
+}
+
+/* Tekst blijft smaller voor een overzichtelijke indeling */
+
+.case-study.next .project-intro .project-overview {
+    width: 100%;
+    max-width: 690px;
+
     margin: 0;
     padding: 0;
 }
 
-.case-study.next .project-overview h2 {
-    margin-bottom: 36px;
+.case-study.next .project-intro .project-overview h2 {
+    margin: 0 0 18px;
+}
+
+.case-study.next .project-intro .project-overview p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Foto blijft even breed als het projectoverzicht */
+
+.case-study.next .project-intro .project-intro-image {
+    width: 100%;
+    max-width: 690px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.case-study.next .project-intro-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 20px;
+    margin: 0;
+}
+
+/* Iets compactere tussenruimte op mobiel */
+
+@media (max-width: 640px) {
+    .case-study.next .project-intro {
+        row-gap: 26px;
+        margin-bottom: 45px;
+    }
+
+    .case-study.next .project-intro .project-overview h2 {
+        margin-bottom: 14px;
+    }
+}
+
+/* Namen: paars, vet en onderlijnd */
+
+.case-study.next .project-overview p a {
+    color: #8b2bb1;
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.case-study.next .project-overview p a:hover,
+.case-study.next .project-overview p a:focus-visible {
+    color: #641b83;
+    text-decoration-thickness: 2px;
+}
+
+
+
+/* Mobiel */
+
+@media (max-width: 640px) {
+    .case-study.next {
+        padding-top: 16px;
+    }
+
+    .case-study.next .project-intro {
+        gap: 20px;
+        margin-bottom: 45px;
+    }
+
+    .case-study.next .project-intro .project-header h1 {
+        font-size: 27px;
+    }
+
+    .case-study.next .project-intro .project-overview h2 {
+        margin-bottom: 12px;
+    }
 }
 
 .case-study.next .intro-logo {
