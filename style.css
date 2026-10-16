@@ -1209,6 +1209,7 @@ body{
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  text-decoration: none;
 }
 
 /* derde knop: onder de twee andere, even breed en gecentreerd */
