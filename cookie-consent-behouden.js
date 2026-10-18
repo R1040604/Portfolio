@@ -33,11 +33,16 @@
  
     // Google Consent Mode: werkt alleen voor Google-tags die ermee overweg kunnen
     // Vereist de gtag()-functie uit het standaardsnippet bovenin je <head>
-    function googleConsent(state) {
-        if (typeof window.gtag === 'function') {
-            window.gtag('consent', 'update', { analytics_storage: state });
-        }
+  function googleConsent(state) {
+    if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+            analytics_storage: state,
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
     }
+}
  
     function apply(value) {
         if (value === 'accepted') {
