@@ -1743,6 +1743,32 @@ body {
     margin: 0 auto 120px;
     padding: 0;
 }
+.project-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;   /* tekst links, logo rechts */
+    align-items: center;
+    gap: 56px;
+}
+ 
+.project-intro__logo {
+    justify-self: center;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+ 
+/* Tablet en gsm: het logo komt onder de tekst */
+@media (max-width: 800px) {
+    .project-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+ 
+    .project-intro__logo {
+        max-width: 200px;
+    }
+}
+ 
 
 .case-study.cats h2 {
     margin: 0 0 22px;
