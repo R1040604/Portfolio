@@ -60,6 +60,7 @@
         content="Maak kennis met Sarah El Mazouki, student UX/UI-designer met interesse in gebruikersonderzoek, webdesign, toegankelijkheid en digitale ervaringen.">
     <link rel="canonical" href="https://sarah-el-marzouki-portfolio.vercel.app/overmij.html">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animaties.css">
     <script defer src="https://t.contentsquare.net/uxa/e393bb985577b.js"></script>
 </head>
 
@@ -102,7 +103,7 @@
         <h1 class="sr-only">Over mij als student UX/UI-designer</h1>
         <!-- Intro + portret -->
         <section class="about-intro">
-            <div class="about-text">
+            <div class="about-text" data-reveal="left">
                 <h2>Hallo, ik ben Sarah.</h2>
                 <p>
                     Ik ben studente Digital Experience Design aan Thomas More in Mechelen. Wat mij aanspreekt in digital
@@ -125,7 +126,7 @@
                 </p>
             </div>
 
-            <div class="about-image">
+            <div class="about-image" data-reveal="right">
                 <img src="images/profielfoto.png" alt="Portret van Sarah El Mazouki, student UX/UI-designer">
             </div>
         </section>
@@ -143,11 +144,11 @@
 
         <!-- Buiten mijn studies + knop -->
         <section class="about-hobby">
-            <div class="video-hobby">
+            <div class="video-hobby" data-reveal="left">
                 <img src="images/video.png" alt="Screenshot van een video-edit">
             </div>
 
-            <div class="hobby-text">
+            <div class="hobby-text" data-reveal="right">
                 <h2>Buiten mijn studies</h2>
                 <p>
                     Buiten mijn studies ben ik ook graag creatief bezig. In mijn vrije tijd hou ik me onder andere bezig
@@ -193,6 +194,8 @@
     </footer>
     <script src="script.js"></script>
     <script src="cookie-consent-behouden.js"></script>
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="animaties.js"></script>
 </body>
 
 </html>
