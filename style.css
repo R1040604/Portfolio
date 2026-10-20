@@ -3329,3 +3329,57 @@ margin-bottom:60px;
 .privacy th {
     background-color: var(--light-purple);
 }
+
+/* =========================
+   KNOPPEN ONDER ELK PROJECT
+   Zet dit onderaan je style.css
+========================= */
+ 
+/* Zachte scroll voor "Terug naar boven" (sla over als je dit al hebt) */
+html {
+    scroll-behavior: smooth;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+ 
+/* Desktop: naast elkaar, gecentreerd, niet breder dan de inhoud */
+body .project-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: min(1000px, calc(100% - 40px));
+    margin: 72px auto 96px;
+}
+ 
+body .project-nav .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 260px;
+    min-height: 56px;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+/* Gsm: onder elkaar, volle breedte */
+@media (max-width: 600px) {
+    body .project-nav {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 56px auto 72px;
+    }
+ 
+    body .project-nav .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
