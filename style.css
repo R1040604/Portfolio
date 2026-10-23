@@ -3384,3 +3384,26 @@ body .project-nav .btn {
         min-width: 0;
     }
 }
+
+body {
+    position: relative;
+    z-index: 0;
+}
+ 
+.page-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 820px;           /* alleen bovenaan de pagina, zoals op je homepage */
+    z-index: -1;
+    overflow: hidden;        /* geen horizontale scrollbalk */
+    pointer-events: none;    /* klikken gaan gewoon door */
+}
+ 
+/* Blaadjes alleen in de marges: weg op kleinere schermen zodat ze nooit over tekst liggen */
+@media (max-width: 1200px) {
+    .page-decor .petal {
+        display: none;
+    }
+}

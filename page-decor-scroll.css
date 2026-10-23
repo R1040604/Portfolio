@@ -1,0 +1,36 @@
+.page-decor.page-decor--long {
+    height: 100%;
+}
+ 
+/* Blobs: komen tevoorschijn als ze in beeld scrollen, verdwijnen daarna weer */
+.scroll-blob {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1.2s ease, transform 1.4s ease;
+}
+ 
+.scroll-blob.is-in {
+    opacity: 1;
+    transform: scale(1);
+}
+ 
+.scroll-blob--pink {
+    background: radial-gradient(circle, rgba(233, 30, 140, 0.30), transparent 70%);
+}
+ 
+.scroll-blob--purple {
+    background: radial-gradient(circle, rgba(155, 20, 134, 0.35), transparent 70%);
+}
+ 
+/* Blaadjes: zichtbaar en zwevend zolang ze in beeld zijn, anders verborgen en stil */
+.petal--scroll {
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    animation-play-state: paused;
+}
+ 
+.petal--scroll.is-in {
+    opacity: 0.75;
+    animation-play-state: running;
+}
+ 
