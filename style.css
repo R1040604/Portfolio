@@ -473,252 +473,130 @@ main > .pink-decoration > h2 {
     }
 }
  
+/* =========================
+   Footer
+========================= */
 .site-footer {
-    background: #520084;
-    color: #fff;
-    padding: 60px 40px 24px;
+    width: 100%;
+    padding: 40px 24px 20px;
+    background: #6600A8;
+    color: #ffffff;
 }
-
+ 
+/* Drie kolommen die allemaal bovenaan beginnen, dus op dezelfde hoogte */
 .footer-container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1.5fr;
-    gap: 40px;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 32px;
     align-items: start;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0;
     text-align: left;
-    
 }
-
+ 
+/* Kolom 1: naam */
 .footer-logo {
     display: inline-block;
-    margin-bottom: 8px;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.footer-brand p {
-    margin: 0;
-    color: rgba(255, 255, 255, .85);
-}
-
-.site-footer h2 {
-    margin: 0 0 16px;
+    margin-bottom: 6px;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #fff;
+    line-height: 1.1;
 }
-
+ 
+.footer-brand p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+}
+ 
+/* "Navigatie" en "Contact": exact dezelfde grootte */
+.site-footer h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+ 
+/* Kolom 2 en 3 */
 .footer-links,
 .contact {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 4px;
 }
-
+ 
 .site-footer a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
-
+ 
+.footer-links a,
+.contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;           /* groot genoeg om aan te tikken */
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;    /* lange e-mail loopt nooit buiten beeld */
+}
+ 
 .footer-links a:hover,
 .contact a:hover {
     text-decoration: underline;
 }
-
+ 
 .site-footer a:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
-
-/* wit icoon met paarse "in": goed contrast */
-.linkedin {
-    display: inline-flex;
-    align-items: center;
+ 
+/* LinkedIn: wit vlak met paarse "in", goed contrast */
+.contact a.linkedin {
     justify-content: center;
     width: 44px;
     height: 44px;
     margin-top: 6px;
-    background: #fff;
-    color: #520084 !important;
     border-radius: 8px;
+    background: #ffffff;
+    color: #6600A8;
     font-size: 1.3rem;
     font-weight: 700;
 }
-
+ 
+.contact a.linkedin:hover {
+    text-decoration: none;
+    background: #f0e6fa;
+}
+ 
+/* Onderste regel */
 .footer-copy {
     max-width: 1100px;
-    margin: 40px auto 0;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, .25);
-    font-size: .9rem;
-    color: rgba(255, 255, 255, .8);
+    margin: 28px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
 }
-
-@media (max-width: 768px) {
+ 
+.footer-copy a {
+    text-decoration: underline;
+}
+ 
+/* Tablet en gsm: alles onder elkaar */
+@media (max-width: 900px) {
     .site-footer {
-        padding: 40px 20px 20px;
+        padding: 32px 20px 16px;
     }
-
+ 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 24px;
     }
-}
-/* =========================
-   FOOTER
-========================= */
-
-.site-footer{
-    background:#6600A8;
-    width:100%;
-}
-
-.footer-container{
-    max-width:1400px;
-    margin:0 auto;
-
-    padding: 0px 80px 100px;  /* boven kleiner, onder en zijkanten blijven gelijk */
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-/* Elke kolom even breed */
-.footer-container > *{
-    flex:1;
-}
-
-/* Sarah */
-
-.footer-logo{
-    color:white;
-    text-decoration:none;
-
-    font-size:4rem;
-    font-weight:500;
-}
-
-/* Links */
-
-.footer-links{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    gap:80px;
-}
-
-.footer-links a{
-    color:white;
-    text-decoration:none;
-
-    font-size:2rem;
-}
-
-/* Contact */
-
-.contact{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    gap:25px;
-}
-
-.contact h2{
-    color:white;
-    font-size:3.5rem;
-    font-weight:500;
-}
-
-.contact a{
-    color:white;
-    text-decoration:none;
-}
-
-/* E-mailadres */
-
-.contact > a:first-of-type{
-    font-size:1.7rem;
-    text-align:center;
-
-    max-width:420px;
-    word-break:break-word;
-}
-
-/* LinkedIn */
-
-.linkedin{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    width:110px;
-    height:110px;
-
-    background:#0077B5;
-    color:white;
-
-    border-radius:10px;
-
-    font-size:4rem;
-    font-weight:bold;
-}
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1024px) {
-    .navbar,
-    .footer-container {
-        max-width: calc(100% - 70px);
-    }
-
-    .hero {
-        padding-top: 70px;
-    }
-
-    .hero-content {
-        max-width: 650px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .skills {
-        margin-top: 120px;
-    }
-
-    .pink-decoration {
-        margin-left: 15%;
-    }
-    
-
-    .footer-container{
-        flex-direction: column;
-        gap: 80px;
-
-        text-align: center;
-    }
-
-    .footer-logo{
-        font-size: 4rem;
-    }
-
-    .footer-links{
-        gap: 40px;
-    }
-
-    .footer-links a{
-        font-size: 1.8rem;
-    }
-
-    .contact h2{
-        font-size: 3rem;
+ 
+    .footer-logo {
+        font-size: 2rem;
     }
 }
 
@@ -3427,5 +3305,120 @@ body {
     .prototypehiFi iframe {
         height: 78vh;
         min-height: 520px;
+    }
+}
+
+/* =========================================================
+   FOOTER: sterke versie die oude footer-regels overschrijft
+   Zet dit HELEMAAL ONDERAAN je style.css (na alles, ook na de @media-blokken).
+   Alle selectors beginnen met "footer.site-footer", daardoor winnen ze van
+   de oude regels (.footer-logo, .contact > a:first-of-type, .linkedin, ...).
+========================================================= */
+
+footer.site-footer {
+    width: 100%;
+    padding: 40px 24px 20px;
+    background: #6600A8;
+    color: #ffffff;
+}
+
+/* Drie GELIJKE kolommen die allemaal bovenaan beginnen.
+   minmax(0, …) zorgt dat een lange tekst (zoals het e-mailadres) een kolom nooit kan oprekken. */
+footer.site-footer .footer-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 32px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+footer.site-footer .footer-container > * {
+    flex: none;
+    min-width: 0;
+}
+
+/* Kolom 1 */
+footer.site-footer .footer-logo {
+    display: inline-block;
+    margin: 0 0 6px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+footer.site-footer .footer-brand p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* "Navigatie" en "Contact": zelfde grootte, zelfde afstand, zelfde hoogte */
+footer.site-footer h2 {
+    margin: 0 0 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+}
+
+/* Kolom 2 en 3 */
+footer.site-footer .footer-links,
+footer.site-footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    text-align: left;
+}
+
+footer.site-footer .footer-links a,
+footer.site-footer .contact a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    max-width: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
+/* LinkedIn */
+footer.site-footer .contact a.linkedin {
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-top: 6px;
+    border-radius: 8px;
+    background: #e1dafa;
+    color: #6600A8;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Onderste regel */
+footer.site-footer .footer-copy {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding-top: 16px;
+    font-size: 0.9rem;
+}
+
+/* Tablet en gsm: alles onder elkaar */
+@media (max-width: 900px) {
+    footer.site-footer {
+        padding: 32px 20px 16px;
+    }
+
+    footer.site-footer .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    footer.site-footer .footer-logo {
+        font-size: 2rem;
     }
 }
