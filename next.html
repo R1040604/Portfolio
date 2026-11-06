@@ -2,74 +2,71 @@
 <html lang="nl">
 
 <head>
+    <!-- Cookie-standaard: tot er gekozen is, geen analytics-cookies -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    <head>
-        <!-- Cookie-standaard: tot er gekozen is, geen analytics-cookies -->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied'
-            });
-        </script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KX3ZXJXG');</script>
+    <!-- End Google Tag Manager -->
 
-            gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied'
-            });
-        </script>
-        <!-- Google Tag Manager -->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-KX3ZXJXG');</script>
-        <!-- End Google Tag Manager -->
+    <!-- Start Wingify Async V3.0 SmartCode -->
+    <link rel="preconnect" href="https://edge.wingify.net" />
+    <script type="text/javascript">
+        window._wingify_code || (function () {
+            var account_id = 1291154,
+                version = 3.0,
+                settings_tolerance = 2000,
+                hide_element = 'body',
+                hide_element_style =
+                    'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important';
+            /* DO NOT EDIT BELOW THIS LINE */
+            var n = window, i = document; if (-1 < i.URL.indexOf('__wingify_disable__') || n._wingify_code) return; var t = !1, r = i.currentScript, nonce = r && r.nonce, e = { sT: settings_tolerance, hES: hide_element_style, hE: hide_element }; try { e = Object.assign(e, JSON.parse(localStorage.getItem('_wingify_' + account_id + '_config'))) } catch (e) { } var code = { script: r, nonce: nonce, settings_tolerance: function () { return e.sT }, hide_element: function () { return performance.getEntriesByName('first-contentful-paint')[0] ? '' : e.hE }, hide_element_style: function () { return '{' + e.hES + '}' }, getVersion: function () { return version }, finish: function () { var e; !t && (t = !0, e = i.getElementById('_vis_opt_path_hides')) && e.parentNode.removeChild(e) }, finished: function () { return t }, addScript: function (e) { var t = i.createElement('script'); t.src = e, nonce && t.setAttribute('nonce', nonce), t.fetchPriority = 'high', i.head.appendChild(t) }, init: function () { n._settings_timer = setTimeout(function () { code.finish() }, this.settings_tolerance()); var e, t = this.hide_element(); t && ((e = i.createElement('style')).id = '_vis_opt_path_hides', nonce && e.setAttribute('nonce', nonce), e.textContent = t + this.hide_element_style(), i.head.appendChild(e)), this.addScript('https://edge.wingify.net/tag/' + account_id + '.js') } }; n._wingify_code = code; code.init();
+        })();
+    </script>
+    <!--End Wingify Async SmartCode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Start Wingify Async V3.0 SmartCode -->
-        <link rel="preconnect" href="https://edge.wingify.net" />
-        <script type="text/javascript">
-            window._wingify_code || (function () {
-                var account_id = 1291154,
-                    version = 3.0,
-                    settings_tolerance = 2000,
-                    hide_element = 'body',
-                    hide_element_style =
-                        'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important';
-                /* DO NOT EDIT BELOW THIS LINE */
-                var n = window, i = document; if (-1 < i.URL.indexOf('__wingify_disable__') || n._wingify_code) return; var t = !1, r = i.currentScript, nonce = r && r.nonce, e = { sT: settings_tolerance, hES: hide_element_style, hE: hide_element }; try { e = Object.assign(e, JSON.parse(localStorage.getItem('_wingify_' + account_id + '_config'))) } catch (e) { } var code = { script: r, nonce: nonce, settings_tolerance: function () { return e.sT }, hide_element: function () { return performance.getEntriesByName('first-contentful-paint')[0] ? '' : e.hE }, hide_element_style: function () { return '{' + e.hES + '}' }, getVersion: function () { return version }, finish: function () { var e; !t && (t = !0, e = i.getElementById('_vis_opt_path_hides')) && e.parentNode.removeChild(e) }, finished: function () { return t }, addScript: function (e) { var t = i.createElement('script'); t.src = e, nonce && t.setAttribute('nonce', nonce), t.fetchPriority = 'high', i.head.appendChild(t) }, init: function () { n._settings_timer = setTimeout(function () { code.finish() }, this.settings_tolerance()); var e, t = this.hide_element(); t && ((e = i.createElement('style')).id = '_vis_opt_path_hides', nonce && e.setAttribute('nonce', nonce), e.textContent = t + this.hide_element_style(), i.head.appendChild(e)), this.addScript('https://edge.wingify.net/tag/' + account_id + '.js') } }; n._wingify_code = code; code.init();
-            })();
-        </script>
-        <!--End Wingify Async SmartCode -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats &amp; Cups | Toegankelijk UX/UI Herontwerp - Sarah El Mazouki</title>
 
-        <title>Cats &amp; Cups | Toegankelijk UX/UI Herontwerp - Sarah El Mazouki</title>
+    <meta name="description"
+        content="Bekijk design van de website van NEXT door Sarah El Mazouki samen in groep, met focus op toegankelijkheid een gebruiksvriendelijkheid.">
 
-        <meta name="description"
-            content="Bekijk de redesign van de lumiere app door Sarah El Mazouki, met focus op toegankelijkheid een gebruiksvriendelijke app.">
+    <link rel="canonical" href="https://sarah-el-marzouki-portfolio.vercel.app/next.html">
 
-        <link rel="canonical" href="https://sarah-el-marzouki-portfolio.vercel.app/next.html">
-
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="animaties.css">
-        <link rel="stylesheet" href="page-decor-scroll.css">
-        <script defer src="https://t.contentsquare.net/uxa/e393bb985577b.js"></script>
-    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animaties.css">
+    <link rel="stylesheet" href="page-decor-scroll.css">
+    <script defer src="https://t.contentsquare.net/uxa/e393bb985577b.js"></script>
 </head>
 
 <body>
