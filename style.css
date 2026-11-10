@@ -3307,6 +3307,10 @@ body {
         min-height: 520px;
     }
 }
+ /* .prototypehiFi {
+      width: min(100%, 560px);
+  }
+      */
 
 /* =========================================================
    FOOTER: sterke versie die oude footer-regels overschrijft
