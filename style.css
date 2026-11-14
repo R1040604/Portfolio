@@ -302,6 +302,32 @@ a {
     filter: brightness(1.08);
     transform: translateY(-3px);
 }
+.project-text .project-tag {
+    align-self: flex-start;          /* blijft zo breed als zijn tekst */
+    padding: 4px 14px;
+    border: 1.5px solid #222222;
+    border-radius: 10px;
+    background: #7b2fa8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.project-text .project-tags {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);   /* twee labels per rij */
+    gap: 8px;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Gsm: één label per rij */
+@media (max-width: 600px) {
+    .project-text .project-tags {
+        grid-template-columns: max-content;
+    }
+}
+
  
 /* Beweging uitzetten voor wie dat liever heeft */
 @media (prefers-reduced-motion: reduce) {
