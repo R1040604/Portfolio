@@ -3479,3 +3479,44 @@ label,
 .button {
     cursor: var(--cursor-link);
 }
+.project-card {
+    position: relative;
+}
+
+/* Onzichtbare link over het hele kaartje */
+.project-card__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* De knop blijft erboven, met zijn eigen hover-effect */
+.project-link {
+    position: relative;
+    z-index: 2;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid #222222;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: transform 0.2s ease, filter 0.2s ease;   /* filter erbij */
+}
+
+.project-card:hover,
+.project-card:focus-within {
+    filter: brightness(1.08);        /* zelfde als je knoppen */
+    transform: translateY(-3px);     /* was -4px, nu hetzelfde als je knoppen */
+}
+.project-card .project-link:hover,
+.project-card .project-link:focus-visible {
+    filter: none;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .project-card { transition: none; }
+    .project-card:hover,
+    .project-card:focus-within { transform: none; }
+}
